@@ -58,5 +58,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Manager" />
+    <Folder Include="Manager\Tables" />
+    <Folder Include="Manager\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Manager\Manager.sql" />
+    <Build Include="Manager\Tables\Account.sql" />
+    <Build Include="Manager\Tables\Session.sql" />
+    <Build Include="Manager\Tables\Character.sql" />
+    <Build Include="Manager\Tables\DungeonMaster.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ResourceManager.Database.refactorlog" />
   </ItemGroup>
 </Project>
