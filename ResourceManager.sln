@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceManager", "Resource
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceManager.Tests", "ResourceManager.Tests\ResourceManager.Tests.csproj", "{2C5B98CB-6D19-46BA-BDA4-560A8F7C1D6A}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ResourceManagerDatabase", "ResourceManager.Database\ResourceManagerDatabase.sqlproj", "{AF5E0C77-A21A-4302-8948-09D32BC46488}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{2C5B98CB-6D19-46BA-BDA4-560A8F7C1D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5B98CB-6D19-46BA-BDA4-560A8F7C1D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5B98CB-6D19-46BA-BDA4-560A8F7C1D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5E0C77-A21A-4302-8948-09D32BC46488}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
