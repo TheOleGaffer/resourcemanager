@@ -67,9 +67,10 @@
     <Build Include="Manager\Tables\Account.sql" />
     <Build Include="Manager\Tables\Session.sql" />
     <Build Include="Manager\Tables\Character.sql" />
-    <Build Include="Manager\Tables\DungeonMaster.sql" />
     <Build Include="Manager\Stored Procedures\AddAccount.sql" />
     <Build Include="Manager\Stored Procedures\GetUser.sql" />
+    <Build Include="Manager\Stored Procedures\GetSessionsOfUser.sql" />
+    <Build Include="Manager\Stored Procedures\AddSession.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ResourceManager.Database.refactorlog" />

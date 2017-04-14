@@ -15,8 +15,8 @@ namespace ResourceManager
         }
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
-            //todo 
-            //add sql logic etc
+            Session.Clear();
+            Response.Redirect("Default.aspx");
         }
    }
 }

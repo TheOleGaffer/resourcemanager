@@ -21,12 +21,12 @@ namespace ResourceManager.Pages
             {
                 var user = new User(Username.Text, Password.Text, Email.Text);
                 UserManager.RegisterNewUser(user);
-                //todo
-                //redirect to new page and maybe add session?
+                SuccessMessage.Visible = true;
+                SuccessText.Text = "Successfully created a new user!";
             }
             else
             {
-                ErrorMessage.Text = "That UserName is already taken!";
+                ErrorMessage.Text = "The userName is already taken!";
             }
                        
         }

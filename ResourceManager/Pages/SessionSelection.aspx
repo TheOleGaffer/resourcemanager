@@ -1,16 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SessionSelection.aspx.cs" Inherits="ResourceManager.Pages.SessionSelection" %>
+﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SessionSelection.aspx.cs" Inherits="ResourceManager.Pages.SessionSelection" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+<asp:Content runat="server" ID="Content1" ContentPlaceHolderID="MainContent">
     
-    </div>
-    </form>
-</body>
-</html>
+
+    <asp:Button ID="CreateButton" runat="server" Height="37px" OnClick="createButton_Click" Text="Create New Game" Width="95px" />
+    
+
+</asp:Content>

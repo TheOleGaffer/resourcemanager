@@ -49,5 +49,10 @@
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Sign Up" CssClass="btn btn-default" />
             </div>
         </div>
+        <asp:PlaceHolder runat="server" ID="SuccessMessage" Visible="false">
+            <p class="text-success">
+                <asp:Literal runat="server" ID="SuccessText" />
+            </p>
+        </asp:PlaceHolder>
     </div>
 </asp:Content>

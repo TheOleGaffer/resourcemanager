@@ -25,14 +25,14 @@ namespace ResourceManager.Pages
                 else
                 {
                     ErrorMessage.Visible = true;
-                    FailureText.Text = "That Username and Password combination is incorrect!";
+                    FailureText.Text = "The username and password combination is incorrect!";
                 }
 
             }
             else
             {
                 ErrorMessage.Visible = true;
-                FailureText.Text = "That Username does not exist!";
+                FailureText.Text = "The username does not exist!";
             }
         }
     }
