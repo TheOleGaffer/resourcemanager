@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Character]
 (
-	[CharacterId] INT NOT NULL PRIMARY KEY, 
+	[CharacterId] INT Identity(1,1) PRIMARY KEY, 
     [UserId] INT NOT NULL, 
     [SessionId] INT NOT NULL, 
     [CharacterName] NVARCHAR(50) NOT NULL DEFAULT 'Character', 

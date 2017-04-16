@@ -13,7 +13,7 @@ namespace ResourceManager.Pages
     public partial class SessionSelection : System.Web.UI.Page
     {
         public const string connectionString =
-    "Data Source=localhost\\TESTSERVER;" +
+    "Data Source=localhost\\SQLEXPRESS;" +
     "Initial Catalog=ResourceManager;" +
     "Integrated Security=SSPI;";
 
