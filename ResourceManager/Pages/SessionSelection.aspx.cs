@@ -6,42 +6,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Newtonsoft.Json;
 using ResourceManager.Controllers;
 
 namespace ResourceManager.Pages
 {
     public partial class SessionSelection : System.Web.UI.Page
     {
-        public const string connectionString =
-    "Data Source=localhost\\SQLEXPRESS;" +
-    "Initial Catalog=ResourceManager;" +
-    "Integrated Security=SSPI;";
-
+        public List<CharacterSession> SessionList;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["username"] == null)
                 Response.Redirect("Login.aspx");
-        }
+            SessionList = SessionManager.GetCharacterSessions(Session["username"].ToString());
+            var json = JsonConvert.SerializeObject(SessionList);
+            ClientScript.RegisterArrayDeclaration("dataList", json);
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "id", "start()", true);
 
+        }
         protected void createButton_Click(object sender, EventArgs e)
         {
-            using (var conn = new SqlConnection(connectionString))
-            using (var command = new SqlCommand("AddSession", conn) { CommandType = CommandType.StoredProcedure })
-            {
-                conn.Open();
-                var user = UserManager.GetUser(Session["username"].ToString());
-                command.Parameters.AddWithValue("@DmID", user.UserID);
-                command.Parameters.AddWithValue("@SessionName", "TEST");
-                try
-                {
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
 
-            }
+            SessionManager.CreateNewSession(Session["username"].ToString());
         }
     }
 }
