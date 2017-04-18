@@ -51,7 +51,7 @@ function makeUl(array) {
     var plussign = document.createElement('div');
     plussign.id = "addplussign";
     
-    var button = document.getElementById("MainContent_createsessionbtn");
+    var button = document.getElementById("createsessionbtn");
 
     //had to add the button beforehand so the code-behind could compile
     //I want it in the list though so I remove it then add it to the list
@@ -81,4 +81,57 @@ function reloadStylesheets() {
         this.href = this.href.replace(/\?.*|$/, queryString);
     });
 }
+
+$(document).ready(function () {
+    $(".btn-select").each(function (e) {
+        var value = $(this).find("ul li.selected").html();
+        if (value != undefined) {
+            $(this).find(".btn-select-input").val(value);
+            $(this).find(".btn-select-value").html(value);
+        }
+    });
+});
+
+$(document).on('click', '.btn-select', function (e) {
+    e.preventDefault();
+    var ul = $(this).find("ul");
+    if ($(this).hasClass("active")) {
+        if (ul.find("li").is(e.target)) {
+            var target = $(e.target);
+            target.addClass("selected").siblings().removeClass("selected");
+            var value = target.html();
+            console.log(value);
+//            debugger;
+            if (value == "Custom Amount") {
+                var dropdown = document.querySelector("#customamount");
+                dropdown.classList.remove("disablerow");
+            }
+            var temp = document.getElementById('startingGoldValue');
+            temp.value = value;
+            $(this).find(".btn-select-input").val(value);
+            $(this).find(".btn-select-value").html(value);
+
+        }
+        ul.hide();
+        $(this).removeClass("active");
+    }
+    else {
+        $('.btn-select').not(this).each(function () {
+            $(this).removeClass("active").find("ul").hide();
+        });
+        ul.slideDown(300);
+        $(this).addClass("active");
+    }
+});
+
+$(document).on('click', function (e) {
+    var target = $(e.target).closest(".btn-select");
+    if (!target.length) {
+        $(".btn-select").removeClass("active").find("ul").hide();
+    }
+});
+
+//$('#demolist li').on('click', function () {
+//    $('#datebox').val($(this).text());
+//});
 
