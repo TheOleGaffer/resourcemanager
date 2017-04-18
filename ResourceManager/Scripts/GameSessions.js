@@ -8,16 +8,20 @@ function makeUl(array) {
     var list = document.createElement('ul');
     for (var i = 0; i < array.length; i++) {
         var item = document.createElement('li');
+        item.classList.add("gamesession");
         var charName = array[i].CharacterName;
         var sessionName = array[i].SessionName;
         var charClass = array[i].CharacterClass;
         var charRace = array[i].CharacterRace;
         var div = document.createElement('div');
         var divimage = document.createElement('div');
+        var hoverstate = document.createElement('div');
         divimage.id = 'thumbnail';
         item.appendChild(divimage);
         div.id = 'sessionname';
         div.appendChild(document.createTextNode(sessionName));
+        hoverstate.id = 'hoverstate';
+        item.appendChild(hoverstate);
         item.appendChild(div);
         //if they are the dm of the session we don't want any of the elements
         if (array[i].IsDM != 'true') {

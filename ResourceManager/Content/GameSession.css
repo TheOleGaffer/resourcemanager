@@ -9,6 +9,23 @@
     width: 14em;
     height: 13.5em;
 }
+
+.gamesession:hover #hoverstate{
+    display: inline;
+}
+#hoverstate {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,52,64,0.75);
+    width: 100%;
+    height: 100%;
+    padding: 4em .5em .5em .5em;
+    color: #fff;
+}
 #thumbnail {
     background-color: #b8b8b8;
     background-image: url("/Content/logo.jpg");
@@ -39,12 +56,20 @@
     visibility: hidden;
 }
 
+hr {
+    position: absolute;
+    left: 12em;
+    bottom: 0;
+    height: 5em;
+    width: 90em;
+}
+
 footer {
     position: absolute;
     left: 12em;
     bottom: 0;
     height: 5em;
-    width: 100%;
+    width: 50em;
 }
 
 #createsessionbtn {
