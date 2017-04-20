@@ -7,18 +7,18 @@ using System.Web;
 
 namespace ResourceManager.Controllers
 {
-    public class SessionManager
+    public class CampaignManager
     {
         public const string ConnectionString =
-            "Data Source=localhost\\SQLEXPRESS;;" +
+            "Data Source=localhost\\TESTSERVER;;" +
             "Initial Catalog=ResourceManager;" +
             "Integrated Security=SSPI;";
 
-        public static List<CharacterSession> GetCharacterSessions(string username)
+        public static List<CharacterCampaign> GetCharacterCampaigns(string username)
         {
-            var list = new List<CharacterSession>();
+            var list = new List<CharacterCampaign>();
             using (var conn = new SqlConnection(ConnectionString))
-            using (var command = new SqlCommand("GetSessionsOfUser", conn) {CommandType = CommandType.StoredProcedure})
+            using (var command = new SqlCommand("GetCampaignsOfUser", conn) {CommandType = CommandType.StoredProcedure})
             {
                 conn.Open();
                 command.Parameters.AddWithValue("@UName", username);
@@ -26,7 +26,7 @@ namespace ResourceManager.Controllers
                 {
                     while (rdr.Read())
                     {
-                        list.Add(new CharacterSession((int) rdr[0], rdr[1].ToString(), rdr[2].ToString(), rdr[3].ToString(),
+                        list.Add(new CharacterCampaign((int) rdr[0], rdr[1].ToString(), rdr[2].ToString(), rdr[3].ToString(),
                             rdr[4].ToString(), (int) rdr[5], (int) rdr[6]));
                     }
 
@@ -35,15 +35,15 @@ namespace ResourceManager.Controllers
             return list;
         }
 
-        public static void CreateNewSession(string username)
+        public static void CreateNewCampaign(string username)
         {
             using (var conn = new SqlConnection(ConnectionString))
-            using (var command = new SqlCommand("AddSession", conn) { CommandType = CommandType.StoredProcedure })
+            using (var command = new SqlCommand("AddCampaign", conn) { CommandType = CommandType.StoredProcedure })
             {
                 conn.Open();
                 var user = UserManager.GetUser(username);
                 command.Parameters.AddWithValue("@DmID", user.UserID);
-                command.Parameters.AddWithValue("@SessionName", "TEST");
+                command.Parameters.AddWithValue("@CampaignName", "TEST");
                 try
                 {
                     command.ExecuteNonQuery();

@@ -11,15 +11,15 @@ using ResourceManager.Controllers;
 
 namespace ResourceManager.Pages
 {
-    public partial class SessionSelection : System.Web.UI.Page
+    public partial class CampaignSelection : System.Web.UI.Page
     {
-        public List<CharacterSession> SessionList;
+        public List<CharacterCampaign> CampaignList;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["username"] == null)
                 Response.Redirect("Login.aspx");
-            SessionList = SessionManager.GetCharacterSessions(Session["username"].ToString());
-            var json = JsonConvert.SerializeObject(SessionList);
+            CampaignList = CampaignManager.GetCharacterCampaigns(Session["username"].ToString());
+            var json = JsonConvert.SerializeObject(CampaignList);
             ClientScript.RegisterArrayDeclaration("dataList", json);
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "id", "start()", true);
 
@@ -27,7 +27,7 @@ namespace ResourceManager.Pages
         protected void createButton_Click(object sender, EventArgs e)
         {
 
-            SessionManager.CreateNewSession(Session["username"].ToString());
+            CampaignManager.CreateNewCampaign(Session["username"].ToString());
         }
     }
 }

@@ -10,7 +10,7 @@
 namespace ResourceManager.Pages {
     
     
-    public partial class SessionSelection {
+    public partial class CampaignSelection {
         
         /// <summary>
         /// startingGoldValue control.

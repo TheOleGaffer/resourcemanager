@@ -1,17 +1,17 @@
-﻿<%@ Page Title="My Games" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SessionSelection.aspx.cs" Inherits="ResourceManager.Pages.SessionSelection" %>
+﻿<%@ Page Title="My Games" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CampaignSelection.aspx.cs" Inherits="ResourceManager.Pages.CampaignSelection" %>
 <%@ Import Namespace="System.Web.Script.Serialization" %>
 
 
 
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="MainContent">
-        <script type = "text/javascript" src="/Scripts/GameSessions.js"></script>
-    <link rel="stylesheet" type="text/css"  href="/Content/GameSession.css" />
+        <script type = "text/javascript" src="/Scripts/GameCampaigns.js"></script>
+    <link rel="stylesheet" type="text/css"  href="/Content/GameCampaign.css" />
     
 
     <h1>My Campaigns</h1>
 
-    <div id="sessionList">
-            <button id="createsessionbtn" data-toggle="modal" data-target="#myModal"></button>
+    <div id="CampaignList">
+            <button id="createCampaignbtn" data-toggle="modal" data-target="#myModal"></button>
     </div>
     <asp:HiddenField ID="startingGoldValue" runat="server" value="" ClientIDMode="Static"/>
 

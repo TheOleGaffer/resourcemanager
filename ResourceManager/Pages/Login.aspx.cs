@@ -18,9 +18,9 @@ namespace ResourceManager.Pages
                 if (UserManager.AreValidLoginCredentials(Username.Text, Password.Text))
                 {
                     Session["username"] = Username.Text;
-                    Response.Redirect("SessionSelection.aspx");
+                    Response.Redirect("CampaignSelection.aspx");
                     //todo
-                    //redirect to new page and maybe add session?
+                    //redirect to new page and maybe add Campaign?
                 }
                 else
                 {
