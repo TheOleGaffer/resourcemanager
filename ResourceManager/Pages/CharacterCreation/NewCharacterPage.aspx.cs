@@ -6,6 +6,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
+
 
 namespace ResourceManager.Pages.CharacterCreation
 {
@@ -479,6 +481,7 @@ namespace ResourceManager.Pages.CharacterCreation
             SkillsBox.Items.FindByValue("16").Enabled = false;
             SkillsBox.Items.FindByValue("17").Enabled = false;
 
+            SkillPoints.Text = "2";
 
             //Artificier Class
             if (ClassDropDown.SelectedIndex == 0)
@@ -512,73 +515,294 @@ namespace ResourceManager.Pages.CharacterCreation
                 SavesBox.Items.FindByValue("1").Selected = true;
                 SavesBox.Items.FindByValue("5").Selected = true;
 
+                SkillsBox.Items.FindByValue("0").Enabled = true;
+                SkillsBox.Items.FindByValue("1").Enabled = true;
+                SkillsBox.Items.FindByValue("2").Enabled = true;
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("4").Enabled = true;
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("8").Enabled = true;
+                SkillsBox.Items.FindByValue("9").Enabled = true;
+                SkillsBox.Items.FindByValue("10").Enabled = true;
+                SkillsBox.Items.FindByValue("11").Enabled = true;
+                SkillsBox.Items.FindByValue("12").Enabled = true;
+                SkillsBox.Items.FindByValue("13").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
+                SkillsBox.Items.FindByValue("15").Enabled = true;
+                SkillsBox.Items.FindByValue("16").Enabled = true;
+                SkillsBox.Items.FindByValue("17").Enabled = true;
 
+                SkillPoints.Text = "3";
             }
             //Cleric
             if (ClassDropDown.SelectedIndex == 3)
             {
                 SavesBox.Items.FindByValue("4").Selected = true;
                 SavesBox.Items.FindByValue("5").Selected = true;
+
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("9").Enabled = true;
+                SkillsBox.Items.FindByValue("13").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
             }
             //Druid
             if (ClassDropDown.SelectedIndex == 4)
             {
                 SavesBox.Items.FindByValue("4").Selected = true;
                 SavesBox.Items.FindByValue("3").Selected = true;
+
+                SkillsBox.Items.FindByValue("1").Enabled = true;
+                SkillsBox.Items.FindByValue("2").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("9").Enabled = true;
+                SkillsBox.Items.FindByValue("10").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
+                SkillsBox.Items.FindByValue("17").Enabled = true;
             }
             //Fighter
             if (ClassDropDown.SelectedIndex == 5)
             {
                 SavesBox.Items.FindByValue("0").Selected = true;
                 SavesBox.Items.FindByValue("2").Selected = true;
+
+                SkillsBox.Items.FindByValue("0").Enabled = true;
+                SkillsBox.Items.FindByValue("1").Enabled = true;
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("11").Enabled = true;
+                SkillsBox.Items.FindByValue("17").Enabled = true;
             }
             //Monk
             if (ClassDropDown.SelectedIndex == 6)
             {
                 SavesBox.Items.FindByValue("0").Selected = true;
                 SavesBox.Items.FindByValue("1").Selected = true;
+
+                SkillsBox.Items.FindByValue("0").Enabled = true;
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
+                SkillsBox.Items.FindByValue("16").Enabled = true;
             }
             //Paladin
             if (ClassDropDown.SelectedIndex == 7)
             {
                 SavesBox.Items.FindByValue("4").Selected = true;
                 SavesBox.Items.FindByValue("5").Selected = true;
+
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("9").Enabled = true;
+                SkillsBox.Items.FindByValue("13").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
             }
             //Ranger
             if (ClassDropDown.SelectedIndex == 8)
             {
                 SavesBox.Items.FindByValue("0").Selected = true;
                 SavesBox.Items.FindByValue("1").Selected = true;
+
+                SkillsBox.Items.FindByValue("1").Enabled = true;
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("8").Enabled = true;
+                SkillsBox.Items.FindByValue("10").Enabled = true;
+                SkillsBox.Items.FindByValue("11").Enabled = true;
+                SkillsBox.Items.FindByValue("16").Enabled = true;
+                SkillsBox.Items.FindByValue("17").Enabled = true;
+
+                SkillPoints.Text = "3";
             }
             //Rogue
             if (ClassDropDown.SelectedIndex == 9)
             {
                 SavesBox.Items.FindByValue("1").Selected = true;
                 SavesBox.Items.FindByValue("3").Selected = true;
+
+                SkillsBox.Items.FindByValue("0").Enabled = true;
+                SkillsBox.Items.FindByValue("3").Enabled = true;
+                SkillsBox.Items.FindByValue("4").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("8").Enabled = true;
+                SkillsBox.Items.FindByValue("11").Enabled = true;
+                SkillsBox.Items.FindByValue("12").Enabled = true;
+                SkillsBox.Items.FindByValue("13").Enabled = true;
+                SkillsBox.Items.FindByValue("15").Enabled = true;
+                SkillsBox.Items.FindByValue("16").Enabled = true;
+
+                SkillPoints.Text = "4";
             }
             //Sorcerer
             if (ClassDropDown.SelectedIndex == 10)
             {
                 SavesBox.Items.FindByValue("2").Selected = true;
                 SavesBox.Items.FindByValue("5").Selected = true;
+
+                SkillsBox.Items.FindByValue("2").Enabled = true;
+                SkillsBox.Items.FindByValue("4").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("11").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
             }
             //Warlock
             if (ClassDropDown.SelectedIndex == 11)
             {
                 SavesBox.Items.FindByValue("4").Selected = true;
                 SavesBox.Items.FindByValue("5").Selected = true;
+
+                SkillsBox.Items.FindByValue("2").Enabled = true;
+                SkillsBox.Items.FindByValue("4").Enabled = true;
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("7").Enabled = true;
+                SkillsBox.Items.FindByValue("8").Enabled = true;
+                SkillsBox.Items.FindByValue("10").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
             }
             //Wizard
             if (ClassDropDown.SelectedIndex == 12)
             {
                 SavesBox.Items.FindByValue("4").Selected = true;
                 SavesBox.Items.FindByValue("3").Selected = true;
+
+                SkillsBox.Items.FindByValue("2").Enabled = true;
+                SkillsBox.Items.FindByValue("5").Enabled = true;
+                SkillsBox.Items.FindByValue("6").Enabled = true;
+                SkillsBox.Items.FindByValue("8").Enabled = true;
+                SkillsBox.Items.FindByValue("9").Enabled = true;
+                SkillsBox.Items.FindByValue("14").Enabled = true;
             }
         }
 
-        protected void SkillsBox_SelectedIndexChanged(object sender, EventArgs e)
+        protected void SkillsBox__SelectedIndexChanged(Object sender, EventArgs e)
         {
+            
+            int points = 2;
+            if(ClassDropDown.SelectedValue == "Bard" || ClassDropDown.SelectedValue == "Ranger")
+            {
+                points = 3;
+            }
+            string curItem = SkillsBox.SelectedIndex.ToString();
 
+            for (int i = 0; i <= 17; i++)
+            {
+                string temp = Convert.ToString(i);
+                if(SkillsBox.Items.FindByValue(temp).Selected == true)
+                {
+                    points -= 1;
+                }
+
+            }
+                        if (points == 0)
+                        {
+                            for (int i = 0; i <= 17; i++)
+                            {
+                                string temp = Convert.ToString(i);
+                                SkillsBox.Items.FindByValue(temp).Enabled = false;
+
+                            }
+                        }
+                        else
+                        {
+
+                        }
+            SkillPoints.Text = Convert.ToString(points);
+        }
+
+        protected void ConfirmButton_Click(object sender, EventArgs e)
+        {
+            if (NameBox.Text != "")
+            {
+                if (AgeBox.Text != "")
+                {
+                    if (TotalAvaliable.Text == "0")
+                    {
+                        if (SkillPoints.Text == "0")
+                        {
+                            String name = NameBox.Text;
+                            String Age = AgeBox.Text;
+                            String Sex = SexDropDown.SelectedItem.Text;
+                            String Race = RaceDropDown.SelectedItem.Text;
+                            String Class = ClassDropDown.SelectedItem.Text;
+                            String Alignment = AlignmentDropDown.SelectedItem.Text;
+                            int str = Convert.ToInt32(StrTotal.Text);
+                            int dex = Convert.ToInt32(DexTotal.Text);
+                            int con = Convert.ToInt32(ConTotal.Text);
+                            int Int = Convert.ToInt32(IntTotal.Text);
+                            int Wis = Convert.ToInt32(WisTotal.Text);
+                            int Cha = Convert.ToInt32(ChaTotal.Text);
+                            String save1 = "";
+                            String save2 = "";
+                            for(int i = 0; i <= 5; i++)
+                            {
+                                String temp = Convert.ToString(i);
+                                if(SavesBox.Items.FindByValue(temp).Selected)
+                                {
+                                    if (save1 == "")
+                                    {
+                                        save1 = SavesBox.Items.FindByValue(temp).Text;
+                                    }
+                                    else
+                                    {
+                                        save2 = SavesBox.Items.FindByValue(temp).Text;
+                                    }
+                                }
+                            }
+                            String skill1 = "";
+                            String skill2 = "";
+                            String skill3 = "";
+                            for (int i = 0; i <= 17; i++)
+                            {
+                                String temp = Convert.ToString(i);
+                                if (SkillsBox.Items.FindByValue(temp).Selected)
+                                {
+                                    if (skill1 == "")
+                                    {
+                                        skill1 = SkillsBox.Items.FindByValue(temp).Text;
+                                    }
+                                    else if (skill1 != "" && skill2 == "")
+                                    {
+                                        skill2 = SkillsBox.Items.FindByValue(temp).Text;
+                                    }
+                                    else
+                                    {
+                                        skill3 = SkillsBox.Items.FindByValue(temp).Text;
+                                    }
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Text = "Skill Points Still Avaliable";
+                            MessageBox.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Text = "Ability Points Still Avaliable";
+                        MessageBox.Visible = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Text = "Your Character Needs an Age.";
+                    MessageBox.Visible = true;
+                }
+            }
+            else
+            {
+                MessageBox.Text = "Your Character Needs a Name.";
+                MessageBox.Visible = true;
+            }
         }
     }
 }
