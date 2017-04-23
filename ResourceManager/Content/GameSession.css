@@ -1,0 +1,236 @@
+﻿#sessionList li {
+    list-style: none;
+    float: left;
+    border: 1px solid #dfe4e9;
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+    position: relative;
+    width: 14em;
+    height: 13.5em;
+}
+
+.gamesession:hover #hoverstate{
+    display: inline;
+}
+#hoverstate {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,52,64,0.75);
+    width: 100%;
+    height: 100%;
+    padding: 4em .5em .5em .5em;
+    color: #fff;
+}
+#thumbnail {
+    background-color: #b8b8b8;
+    background-image: url("/Content/logo.jpg");
+    background-size: 10em 9em;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 9em;
+    margin-bottom: .5em;
+}
+#sessionname {
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    padding: 0;
+}
+#charactername {
+    font-size: 0.875em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#characterclass {
+    visibility: hidden;
+}
+
+#characterrace {
+    visibility: hidden;
+}
+
+hr {
+    position: absolute;
+    left: 12em;
+    bottom: 0;
+    height: 5em;
+    width: 90em;
+}
+
+footer {
+    position: absolute;
+    left: 12em;
+    bottom: 0;
+    height: 5em;
+    width: 50em;
+}
+
+#createsessionbtn {
+    background: none;
+    border: none;
+    padding: 0;
+}
+#createCampaignText {
+    font-weight: bold;
+}
+
+#addcircle {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    margin-left: 2.5em;
+    width: 5em;
+    height: 5em;
+    -webkit-border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    border-radius: 2.5em;
+    background-color: green;
+    overflow: hidden;
+}
+
+#createsessionbtn:hover #addcircle{
+    background-color: darkgreen;
+}
+
+#addplussign {
+    margin-top: 1em;
+    margin-left: 1.125em;
+    margin-right: 1em;
+    height: 3em;
+    width: 3em;
+    background: linear-gradient(to bottom, transparent 40%, 
+                                         white 45%, 
+                                         white 50%,  
+                                         transparent 0%),
+
+              linear-gradient(to right, transparent 40%, 
+                                         white 45%, 
+                                         white 50%,  
+                                         transparent 0%)
+    
+
+}
+
+.modal-body {
+    max-height: 800em;
+}
+
+body .modal-dialog {
+    /* new custom width */
+    /**/
+    width: 100em;
+    
+}
+.questionlabel {
+    float: left;
+    width: 25em;
+    font-weight: bold;
+}
+
+.questionbox {
+    width: 17em;
+}
+.btn-select {
+    position: relative;
+    padding: 0;
+    min-width: 236px;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.btn-select .btn-select-value {
+    padding: 6px 12px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 34px;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+}
+
+.btn-select .btn-select-arrow {
+    float: right;
+    line-height: 20px;
+    padding: 6px 10px;
+    top: 0;
+}
+
+.btn-select ul {
+    display: none;
+    background-color: white;
+    color: black;
+    clear: both;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: none !important;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 33px;
+    z-index: 999;
+}
+.dropdownmenu {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 2em;
+}
+
+
+.disablerow {
+    display: none;
+}
+ 
+-primary:active, .btn-select.btn-primary.active {
+    border-color: #286090;
+}
+
+.btn-select.btn-primary ul li.selected {
+    background-color: #2e6da4;
+    color: white;
+}
+
+.btn-select.btn-primary ul {
+    border: #2e6da4 1px solid;
+}
+
+.btn-select.btn-primary .btn-select-value {
+    background-color: #428bca;
+    border: #2e6da4 1px solid;
+}
+
+.btn-select.btn-primary:hover, .btn-select.btn-primary.active {
+    background-color: #286090;
+}
+
+ .btn-select ul li {
+        padding: 3px 6px;
+ }
+
+.btn-select ul li {
+    padding: 3px 6px;
+    text-align: left;
+}
+
+.btn-select ul li:hover {
+    background-color: #f4f4f4;
+}
+
+.btn-select ul li.selected {
+    color: white;
+}
+
+.input-append .btn.dropdown-toggle {
+    float: none;
+}
