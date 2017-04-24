@@ -10,55 +10,34 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 USE [ResourceManager]
-GO
-SET IDENTITY_INSERT [Campaign].[CoinCarryingOptions] ON 
 
-GO
-INSERT [Campaign].[CoinCarryingOptions] ([CoinCarryingOptionsId], [CoinCarryingOptionsDefinition]) VALUES (1, N'Yes')
-GO
-INSERT [Campaign].[CoinCarryingOptions] ([CoinCarryingOptionsId], [CoinCarryingOptionsDefinition]) VALUES (2, N'No')
-GO
-SET IDENTITY_INSERT [Campaign].[CoinCarryingOptions] OFF
-GO
-SET IDENTITY_INSERT [Campaign].[GoldOptions] ON 
 
+IF NOT EXISTS (SELECT 1 FROM [Campaign].[CoinCarryingOptions])
+	BEGIN
+		SET IDENTITY_INSERT [Campaign].[CoinCarryingOptions] ON 
+		INSERT [Campaign].[CoinCarryingOptions] ([CoinCarryingOptionsId], [CoinCarryingOptionsDefinition]) VALUES (1, N'Yes')
+		INSERT [Campaign].[CoinCarryingOptions] ([CoinCarryingOptionsId], [CoinCarryingOptionsDefinition]) VALUES (2, N'No')
+		SET IDENTITY_INSERT [Campaign].[CoinCarryingOptions] OFF
+		SET IDENTITY_INSERT [Campaign].[GoldOptions] ON 
+		INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (1, N'No Starting Gold', 0)
+		INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (2, N'Based off Classes', 0)
+		INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (3, N'Custom Amount', 0)
+		SET IDENTITY_INSERT [Campaign].[GoldOptions] OFF
+		SET IDENTITY_INSERT [Campaign].[HeightOptions] ON 
+		INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (1, N'Based off Race/Default')
+		INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (2, N'Based off Race with Random Modifier')
+		INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (3, N'Can be Custom')
+		SET IDENTITY_INSERT [Campaign].[HeightOptions] OFF
+		SET IDENTITY_INSERT [Campaign].[LanguageOptions] ON 
+		INSERT [Campaign].[LanguageOptions] ([LanguageOptionsId], [LanguageOptionsDefinition]) VALUES (1, N'Based off Race/Default')
+		INSERT [Campaign].[LanguageOptions] ([LanguageOptionsId], [LanguageOptionsDefinition]) VALUES (2, N'Can be Custom')
+		SET IDENTITY_INSERT [Campaign].[LanguageOptions] OFF
+		SET IDENTITY_INSERT [Campaign].[WeightOptions] ON 
+		INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (1, N'Based off Race/Default')
+		INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (2, N'Based off Race with Random Modifier')
+		INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (3, N'Can be Custom')
+		SET IDENTITY_INSERT [Campaign].[WeightOptions] OFF
+	END
 GO
-INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (1, N'No Starting Gold', 0)
-GO
-INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (2, N'Based off Classes', 0)
-GO
-INSERT [Campaign].[GoldOptions] ([GoldOptionsId], [GoldOptionsDefinition], [CustomValue]) VALUES (3, N'Custom Amount', 0)
-GO
-SET IDENTITY_INSERT [Campaign].[GoldOptions] OFF
-GO
-SET IDENTITY_INSERT [Campaign].[HeightOptions] ON 
 
-GO
-INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (1, N'Based off Race/Default')
-GO
-INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (2, N'Based off Race with Random Modifier')
-GO
-INSERT [Campaign].[HeightOptions] ([HeightOptionsId], [HeightOptionsDefinition]) VALUES (3, N'Can be Custom')
-GO
-SET IDENTITY_INSERT [Campaign].[HeightOptions] OFF
-GO
-SET IDENTITY_INSERT [Campaign].[LanguageOptions] ON 
 
-GO
-INSERT [Campaign].[LanguageOptions] ([LanguageOptionsId], [LanguageOptionsDefinition]) VALUES (1, N'Based off Race/Default')
-GO
-INSERT [Campaign].[LanguageOptions] ([LanguageOptionsId], [LanguageOptionsDefinition]) VALUES (2, N'Can be Custom')
-GO
-SET IDENTITY_INSERT [Campaign].[LanguageOptions] OFF
-GO
-SET IDENTITY_INSERT [Campaign].[WeightOptions] ON 
-
-GO
-INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (1, N'Based off Race/Default')
-GO
-INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (2, N'Based off Race with Random Modifier')
-GO
-INSERT [Campaign].[WeightOptions] ([WeightOptionsId], [WeightOptionsDefinition]) VALUES (3, N'Can be Custom')
-GO
-SET IDENTITY_INSERT [Campaign].[WeightOptions] OFF
-GO

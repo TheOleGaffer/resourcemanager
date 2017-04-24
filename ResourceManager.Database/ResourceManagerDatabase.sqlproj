@@ -77,6 +77,8 @@
     <Build Include="Manager\Tables\HeightOptions.sql" />
     <Build Include="Manager\Tables\CoinCarryingOptions.sql" />
     <Build Include="Manager\Tables\GoldOptions.sql" />
+    <Build Include="Manager\Stored Procedures\GetMostRecentlyAddedCampaign.sql" />
+    <Build Include="Manager\Stored Procedures\GetAllCharactersForCampaign.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ResourceManager.Database.refactorlog" />

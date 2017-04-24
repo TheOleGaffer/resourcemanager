@@ -7,6 +7,15 @@ namespace ResourceManager.Controllers
 {
     public class CharacterCampaign
     {
+        public CharacterCampaign(int Campaignid, string Campaignname, int dungeonmasterid, int userid)
+        {
+            CampaignID = Campaignid;
+            CampaignName = Campaignname;
+            DungeonMasterID = dungeonmasterid;
+            UserID = userid;
+            IsDM = DungeonMasterID == UserID;
+        }
+
         public CharacterCampaign(int Campaignid, string Campaignname, string charactername, string characterrace,
             string characterclass, int dungeonmasterid, int userid)
         {

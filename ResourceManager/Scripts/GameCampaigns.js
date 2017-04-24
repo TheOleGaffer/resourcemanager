@@ -24,7 +24,7 @@ function makeUl(array) {
         item.appendChild(hoverstate);
         item.appendChild(div);
         //if they are the dm of the Campaign we don't want any of the elements
-        if (array[i].IsDM != 'true') {
+        if (array[i].IsDM === false) {
             div = document.createElement('div');
             div.id = 'charactername';
             div.appendChild(document.createTextNode(charName));
@@ -109,9 +109,31 @@ $(document).on('click', '.btn-select', function (e) {
             if (value == "Custom Amount") {
                 var dropdown = document.querySelector("#customamount");
                 dropdown.classList.remove("disablerow");
+                var temp = document.getElementById('startingGoldValue');
+                temp.value = value;
             }
-            var temp = document.getElementById('startingGoldValue');
-            temp.value = value;
+            //pass values back
+            var menuId = ul.attr("id");
+            if (menuId == "dropdownLanguage") {
+                var temp = document.getElementById('DropDownLanguageValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownWeight") {
+                var temp = document.getElementById('DropDownWeightValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownHeight") {
+                var temp = document.getElementById('DropDownHeightValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownCoin") {
+                var temp = document.getElementById('DropDownCoinValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownGold") {
+                var temp = document.getElementById('DropDownGoldValue');
+                temp.value = value;
+            }
             $(this).find(".btn-select-input").val(value);
             $(this).find(".btn-select-value").html(value);
 

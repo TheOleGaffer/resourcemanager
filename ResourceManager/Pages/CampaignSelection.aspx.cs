@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json;
 using ResourceManager.Controllers;
+using ResourceManager.Models;
 
 namespace ResourceManager.Pages
 {
@@ -26,8 +27,11 @@ namespace ResourceManager.Pages
         }
         protected void createButton_Click(object sender, EventArgs e)
         {
-
-            CampaignManager.CreateNewCampaign(Session["username"].ToString());
+            CampaignManager.CreateNewCampaign(new Campaign(CampaignName.Text, Session["username"].ToString(), DropDownGoldValue.Value,
+                DropDownCoinValue.Value, DropDownHeightValue.Value, DropDownWeightValue.Value, DropDownLanguageValue.Value));
+            var campaign = CampaignManager.GetLatestCampaignWithId();
+            Session["campaignid"] = campaign.CampaignID;
+            Response.Redirect("CampaignSession.aspx");
         }
     }
 }

@@ -22,6 +22,51 @@ namespace ResourceManager.Pages {
         protected global::System.Web.UI.WebControls.HiddenField startingGoldValue;
         
         /// <summary>
+        /// DropDownLanguageValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DropDownLanguageValue;
+        
+        /// <summary>
+        /// DropDownHeightValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DropDownHeightValue;
+        
+        /// <summary>
+        /// DropDownWeightValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DropDownWeightValue;
+        
+        /// <summary>
+        /// DropDownGoldValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DropDownGoldValue;
+        
+        /// <summary>
+        /// DropDownCoinValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DropDownCoinValue;
+        
+        /// <summary>
         /// CampaignName control.
         /// </summary>
         /// <remarks>
