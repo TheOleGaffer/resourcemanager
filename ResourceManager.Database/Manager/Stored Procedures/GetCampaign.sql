@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[GetMostRecentlyAddedCampaign]
+﻿CREATE PROCEDURE [dbo].[GetCampaign]
+	@CampaignId int
 AS
 	SELECT TOP 1 [CampaignId]
       ,[DungeonMasterId]
@@ -7,7 +8,6 @@ AS
       ,[CoinCarryingOptionsId]
       ,[HeightOptionsId]
       ,[WeightOptionsId]
-      ,[LanguageOptionsId]
-	FROM [Campaign].[Campaign]
-	ORDER BY [CampaignId] DESC
+      ,[LanguageOptionsId] FROM Campaign.Campaign
+	WHERE Campaign.CampaignId = @CampaignId
 RETURN 0

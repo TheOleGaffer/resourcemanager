@@ -4,8 +4,9 @@
 
 
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="MainContent">
-        <script type = "text/javascript" src="/Scripts/GameCampaigns.js"></script>
+    <script type = "text/javascript" src="/Scripts/GameCampaigns.js"></script>
     <link rel="stylesheet" type="text/css"  href="/Content/GameCampaign.css" />
+    
     
 
     <h1>My Campaigns</h1>
@@ -19,6 +20,8 @@
     <asp:HiddenField ID="DropDownWeightValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="DropDownGoldValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="DropDownCoinValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="CampaignID" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:Button ID="CampaignBtn" runat="server" Text="asdfasdf"  OnClick="joinGame_Click" ClientIDMode="Static" CausesValidation="False"/>
 
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json;
@@ -32,6 +33,13 @@ namespace ResourceManager.Pages
             var campaign = CampaignManager.GetLatestCampaignWithId();
             Session["campaignid"] = campaign.CampaignID;
             Response.Redirect("CampaignSession.aspx");
+        }
+
+        public void joinGame_Click(object sender, EventArgs e)
+        {
+            Session["campaignid"] = int.Parse(CampaignID.Value);
+            Response.Redirect("CampaignSession.aspx");
+            //style="display:none;"
         }
     }
 }

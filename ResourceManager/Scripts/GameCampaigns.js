@@ -3,24 +3,54 @@
 raisePostBack = function() {
     __doPostBack("<%=btnRaisePostBack.ClientID%>", "");
 }
+function OnSuccess(response) {
+    alert(response);
+}
+function OnError(error) {
+    alert(error);
+}
+function joinGameBtn_Click(campaignid) {
+    var temp = document.getElementById('CampaignID');
+    temp.value = campaignid;
+
+    var button = document.getElementById("CampaignBtn");
+    button.click();
+}
+
+function createFunction(id) {
+    return function() { joinGameBtn_Click(id); };
+}
 
 function makeUl(array) {
     var list = document.createElement('ul');
     for (var i = 0; i < array.length; i++) {
         var item = document.createElement('li');
         item.classList.add("gameCampaign");
+
+        var campId = array[i].CampaignID;
         var charName = array[i].CharacterName;
-        var CampaignName = array[i].CampaignName;
+        var campaignName = array[i].CampaignName;
         var charClass = array[i].CharacterClass;
         var charRace = array[i].CharacterRace;
+
+
+        //Create elements that matter when someone hovers over a campaign button
+        var hoverstate = document.createElement('div');
+        var hoverbutton = document.createElement('button');
+        hoverbutton.id = 'hoverbutton';
+        var func = createFunction(campId);
+        hoverbutton.onclick = func;
+        hoverstate.id = 'hoverstate';
+        hoverstate.appendChild(hoverbutton);
+
         var div = document.createElement('div');
         var divimage = document.createElement('div');
-        var hoverstate = document.createElement('div');
         divimage.id = 'thumbnail';
-        item.appendChild(divimage);
         div.id = 'Campaignname';
-        div.appendChild(document.createTextNode(CampaignName));
-        hoverstate.id = 'hoverstate';
+        div.appendChild(document.createTextNode(campaignName));
+
+
+        item.appendChild(divimage);
         item.appendChild(hoverstate);
         item.appendChild(div);
         //if they are the dm of the Campaign we don't want any of the elements
@@ -45,6 +75,8 @@ function makeUl(array) {
         }
         list.appendChild(item);
     }
+
+    //Add the create new campaign element
     var item2 = document.createElement("li");
     var divtext = document.createElement("div");
     divtext.id = "createCampaignText";
@@ -148,6 +180,14 @@ $(document).on('click', '.btn-select', function (e) {
         ul.slideDown(300);
         $(this).addClass("active");
     }
+});
+$(document).ready(function() {
+    $(document).on('click', '#hoverbutton', function () {
+        $("#CampaignBtn").click();
+        var button = document.getElementById("CampaignBtn");
+        button.click();
+        alert("remove"); 
+    });
 });
 
 $(document).on('click', function (e) {

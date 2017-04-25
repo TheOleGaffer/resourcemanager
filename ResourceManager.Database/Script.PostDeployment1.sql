@@ -10,7 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 USE [ResourceManager]
-
+GO
 
 IF NOT EXISTS (SELECT 1 FROM [Campaign].[CoinCarryingOptions])
 	BEGIN
@@ -40,4 +40,28 @@ IF NOT EXISTS (SELECT 1 FROM [Campaign].[CoinCarryingOptions])
 	END
 GO
 
-
+IF NOT EXISTS (SELECT 1 FROM [Skills])
+	BEGIN
+		SET IDENTITY_INSERT [Skills] ON 
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (1, N'Athletics')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (2, N'Acrobatics')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (3, N'Sleight of Hand')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (4, N'Stealth')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (5, N'Arcana')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (6, N'History')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (7, N'Investigation')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (8, N'Nature')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (9, N'Religion')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (10, N'Animal Handling')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (11, N'Insight')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (12, N'Medicine')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (13, N'Perception')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (14, N'Survival')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (15, N'Deception')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (16, N'Intimidation')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (17, N'Performance')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (18, N'Persuasion')
+		INSERT [Skills] ([SkillsId], [SkillsDefinition]) VALUES (20, N'none')
+		SET IDENTITY_INSERT [Skills] OFF
+	END
+GO

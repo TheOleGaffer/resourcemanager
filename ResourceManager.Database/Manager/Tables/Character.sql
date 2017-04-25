@@ -1,6 +1,5 @@
 ﻿CREATE TABLE [dbo].[Character]
 (
-	[CharacterId] INT NOT NULL PRIMARY KEY, 
 	[CharacterId] INT Identity(1,1) PRIMARY KEY, 
     [UserId] INT NOT NULL, 
     [CampaignId] INT NOT NULL, 
@@ -15,9 +14,9 @@
 	[Alignment] NVARCHAR(50) NOT NULL,
 	[Skill1] INT NOT NULL,
 	[Skill2] INT NOT NULL,
-	[Skill3] INT NOT NULL,
-	[SavingThrow1] INT NOT NULL,
-	[SavingThrow2] INT NOT NULL,
+	[Skill3] INT NOT NULL DEFAULT 20,
+	[SavingThrow1] NVARCHAR(50) NOT NULL,
+	[SavingThrow2] NVARCHAR(50) NOT NULL,
     [Strength] INT NOT NULL DEFAULT 0, 
     [Dexterity] INT NOT NULL DEFAULT 0, 
     [Constitution] INT NOT NULL DEFAULT 0, 
@@ -28,5 +27,8 @@
     [Experience] INT NOT NULL DEFAULT 0, 
     [CreatedOnDate] DATETIME NOT NULL DEFAULT (getutcdate()), 
     CONSTRAINT [FK_Character_Account] FOREIGN KEY ([UserId]) REFERENCES [Account]([UserId]), 
-    CONSTRAINT [FK_Character_Campaign] FOREIGN KEY ([CampaignId]) REFERENCES [Campaign].[Campaign]([CampaignId])
+    CONSTRAINT [FK_Character_Campaign] FOREIGN KEY ([CampaignId]) REFERENCES [Campaign].[Campaign]([CampaignId]),
+	CONSTRAINT [FK_Skill1_Campaign] FOREIGN KEY ([Skill1]) REFERENCES [Skills]([SkillsId]),
+	CONSTRAINT [FK_Skill2_Campaign] FOREIGN KEY ([Skill2]) REFERENCES [Skills]([SkillsId]),
+	CONSTRAINT [FK_Skill3_Campaign] FOREIGN KEY ([Skill3]) REFERENCES [Skills]([SkillsId])
 )

@@ -7,10 +7,12 @@ namespace ResourceManager.Models
 {
     public class Character
     {
-        public Character(int characterId, int userId, string characterName, string characterBackground, int characterClass, int characterRace, int age, string sex, int height, int weight, string alignment, string skill1, string skill2, string skill3, string savingThrow1, string savingThrow2, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int level, int experience, DateTime createdOnDate)
+        //todo convert race and class to ints
+        public Character(int characterId, int userId, int campaignid, string characterName, string characterBackground, string characterClass, string characterRace, int age, string sex, int height, int weight, string alignment, int skill1, int skill2, int skill3, string savingThrow1, string savingThrow2, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int level, int experience, DateTime createdOnDate)
         {
             CharacterId = characterId;
             UserId = userId;
+            CampaignId = campaignid;
             CharacterName = characterName;
             CharacterBackground = characterBackground;
             CharacterClass = characterClass;
@@ -38,18 +40,19 @@ namespace ResourceManager.Models
 
         public int CharacterId { get; set; }
         public int UserId { get; set; }
+        public int CampaignId { get; set; }
         public string CharacterName { get; set; }
         public string CharacterBackground { get; set; }
-        public int CharacterClass { get; set; }
-        public int CharacterRace { get; set; }
+        public string CharacterClass { get; set; }
+        public string CharacterRace { get; set; }
         public int Age { get; set; }
         public string Sex { get; set; }
         public int Height { get; set; }
         public int Weight { get; set; }
         public string Alignment { get; set; }
-        public string Skill1 { get; set; }
-        public string Skill2 { get; set; }
-        public string Skill3 { get; set; }
+        public int Skill1 { get; set; }
+        public int Skill2 { get; set; }
+        public int Skill3 { get; set; }
         public string SavingThrow1 { get; set; }
         public string SavingThrow2 { get; set; }
         public int Strength { get; set; }
