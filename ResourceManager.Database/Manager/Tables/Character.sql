@@ -1,6 +1,5 @@
 ﻿CREATE TABLE [dbo].[Character]
 (
-	[CharacterId] INT NOT NULL PRIMARY KEY, 
 	[CharacterId] INT Identity(1,1) PRIMARY KEY, 
     [UserId] INT NOT NULL, 
     [CampaignId] INT NOT NULL, 
@@ -13,11 +12,11 @@
 	[Height] INT NOT NULL,
 	[Weight] INT NOT NULL,
 	[Alignment] NVARCHAR(50) NOT NULL,
-	[Skill1] INT NOT NULL,
-	[Skill2] INT NOT NULL,
-	[Skill3] INT NOT NULL,
-	[SavingThrow1] INT NOT NULL,
-	[SavingThrow2] INT NOT NULL,
+	[Skill1] NVARCHAR(50) NOT NULL,
+	[Skill2] NVARCHAR(50) NOT NULL,
+	[Skill3] NVARCHAR(50) NULL,
+	[SavingThrow1] NVARCHAR(50) NOT NULL,
+	[SavingThrow2] NVARCHAR(50) NOT NULL,
     [Strength] INT NOT NULL DEFAULT 0, 
     [Dexterity] INT NOT NULL DEFAULT 0, 
     [Constitution] INT NOT NULL DEFAULT 0, 
