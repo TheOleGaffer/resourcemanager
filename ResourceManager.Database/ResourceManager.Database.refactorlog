@@ -28,8 +28,6 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="DungeonMasterId" />
   </Operation>
-<<<<<<< HEAD
-=======
   <Operation Name="Rename Refactor" Key="5890df3e-beea-4dd9-a428-3525bbff3d1e" ChangeDateTime="04/14/2017 02:16:17">
     <Property Name="ElementName" Value="[dbo].[Account].[CreatedOnDate]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
