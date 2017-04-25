@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+ResourceManager.Database/ResourceManagerDatabase.jfm
