@@ -8,9 +8,9 @@ function makeUl(array) {
     var list = document.createElement('ul');
     for (var i = 0; i < array.length; i++) {
         var item = document.createElement('li');
-        item.classList.add("gamesession");
+        item.classList.add("gameCampaign");
         var charName = array[i].CharacterName;
-        var sessionName = array[i].SessionName;
+        var CampaignName = array[i].CampaignName;
         var charClass = array[i].CharacterClass;
         var charRace = array[i].CharacterRace;
         var div = document.createElement('div');
@@ -18,13 +18,13 @@ function makeUl(array) {
         var hoverstate = document.createElement('div');
         divimage.id = 'thumbnail';
         item.appendChild(divimage);
-        div.id = 'sessionname';
-        div.appendChild(document.createTextNode(sessionName));
+        div.id = 'Campaignname';
+        div.appendChild(document.createTextNode(CampaignName));
         hoverstate.id = 'hoverstate';
         item.appendChild(hoverstate);
         item.appendChild(div);
-        //if they are the dm of the session we don't want any of the elements
-        if (array[i].IsDM != 'true') {
+        //if they are the dm of the Campaign we don't want any of the elements
+        if (array[i].IsDM === false) {
             div = document.createElement('div');
             div.id = 'charactername';
             div.appendChild(document.createTextNode(charName));
@@ -55,7 +55,7 @@ function makeUl(array) {
     var plussign = document.createElement('div');
     plussign.id = "addplussign";
     
-    var button = document.getElementById("createsessionbtn");
+    var button = document.getElementById("createCampaignbtn");
 
     //had to add the button beforehand so the code-behind could compile
     //I want it in the list though so I remove it then add it to the list
@@ -73,8 +73,8 @@ function makeUl(array) {
 }
 
 function start() {
-    //creates html elements for game sessions
-    document.getElementById('sessionList').appendChild(makeUl(dataList[0]));
+    //creates html elements for game Campaigns
+    document.getElementById('CampaignList').appendChild(makeUl(dataList[0]));
     //have to reload since html is dynamically added and some elements aren't there to begin with
     reloadStylesheets();
 }
@@ -109,9 +109,31 @@ $(document).on('click', '.btn-select', function (e) {
             if (value == "Custom Amount") {
                 var dropdown = document.querySelector("#customamount");
                 dropdown.classList.remove("disablerow");
+                var temp = document.getElementById('startingGoldValue');
+                temp.value = value;
             }
-            var temp = document.getElementById('startingGoldValue');
-            temp.value = value;
+            //pass values back
+            var menuId = ul.attr("id");
+            if (menuId == "dropdownLanguage") {
+                var temp = document.getElementById('DropDownLanguageValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownWeight") {
+                var temp = document.getElementById('DropDownWeightValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownHeight") {
+                var temp = document.getElementById('DropDownHeightValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownCoin") {
+                var temp = document.getElementById('DropDownCoinValue');
+                temp.value = value;
+            }
+            else if (menuId == "dropdownGold") {
+                var temp = document.getElementById('DropDownGoldValue');
+                temp.value = value;
+            }
             $(this).find(".btn-select-input").val(value);
             $(this).find(".btn-select-value").html(value);
 

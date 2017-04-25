@@ -1,4 +1,4 @@
-﻿#sessionList li {
+﻿#CampaignList li {
     list-style: none;
     float: left;
     border: 1px solid #dfe4e9;
@@ -10,7 +10,7 @@
     height: 13.5em;
 }
 
-.gamesession:hover #hoverstate{
+.gameCampaign:hover #hoverstate{
     display: inline;
 }
 #hoverstate {
@@ -36,7 +36,7 @@
     height: 9em;
     margin-bottom: .5em;
 }
-#sessionname {
+#Campaignname {
     font-weight: bold;
     font-size: 0.9em;
     display: block;
@@ -72,7 +72,7 @@ footer {
     width: 50em;
 }
 
-#createsessionbtn {
+#createCampaignbtn {
     background: none;
     border: none;
     padding: 0;
@@ -94,7 +94,7 @@ footer {
     overflow: hidden;
 }
 
-#createsessionbtn:hover #addcircle{
+#createCampaignbtn:hover #addcircle{
     background-color: darkgreen;
 }
 

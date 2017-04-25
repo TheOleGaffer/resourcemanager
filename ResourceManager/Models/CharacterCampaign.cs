@@ -5,13 +5,22 @@ using System.Web;
 
 namespace ResourceManager.Controllers
 {
-    public class CharacterSession
+    public class CharacterCampaign
     {
-        public CharacterSession(int sessionid, string sessionname, string charactername, string characterrace,
+        public CharacterCampaign(int Campaignid, string Campaignname, int dungeonmasterid, int userid)
+        {
+            CampaignID = Campaignid;
+            CampaignName = Campaignname;
+            DungeonMasterID = dungeonmasterid;
+            UserID = userid;
+            IsDM = DungeonMasterID == UserID;
+        }
+
+        public CharacterCampaign(int Campaignid, string Campaignname, string charactername, string characterrace,
             string characterclass, int dungeonmasterid, int userid)
         {
-            SessionID = sessionid;
-            SessionName = sessionname;
+            CampaignID = Campaignid;
+            CampaignName = Campaignname;
             CharacterName = charactername;
             CharacterClass = characterclass;
             CharacterRace = characterrace;
@@ -20,8 +29,8 @@ namespace ResourceManager.Controllers
             IsDM = DungeonMasterID == UserID;
         }
 
-        public int SessionID { get; set; }
-        public string SessionName { get; set; }
+        public int CampaignID { get; set; }
+        public string CampaignName { get; set; }
         public string CharacterName { get; set; }
         public  string CharacterRace { get; set; }
 

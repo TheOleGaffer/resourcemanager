@@ -61,18 +61,29 @@
     <Folder Include="Manager" />
     <Folder Include="Manager\Tables" />
     <Folder Include="Manager\Stored Procedures" />
+    <Folder Include="Manager\Schemas" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Manager\Manager.sql" />
     <Build Include="Manager\Tables\Account.sql" />
-    <Build Include="Manager\Tables\Session.sql" />
+    <Build Include="Manager\Tables\Campaign.sql" />
     <Build Include="Manager\Tables\Character.sql" />
     <Build Include="Manager\Stored Procedures\AddAccount.sql" />
     <Build Include="Manager\Stored Procedures\GetUser.sql" />
-    <Build Include="Manager\Stored Procedures\GetSessionsOfUser.sql" />
-    <Build Include="Manager\Stored Procedures\AddSession.sql" />
+    <Build Include="Manager\Stored Procedures\GetCampaignsOfUser.sql" />
+    <Build Include="Manager\Stored Procedures\AddCampaign.sql" />
+    <Build Include="Manager\Tables\LanguageOptions.sql" />
+    <Build Include="Manager\Schemas\Campaign.sql" />
+    <Build Include="Manager\Tables\WeightOptions.sql" />
+    <Build Include="Manager\Tables\HeightOptions.sql" />
+    <Build Include="Manager\Tables\CoinCarryingOptions.sql" />
+    <Build Include="Manager\Tables\GoldOptions.sql" />
+    <Build Include="Manager\Stored Procedures\GetMostRecentlyAddedCampaign.sql" />
+    <Build Include="Manager\Stored Procedures\GetAllCharactersForCampaign.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ResourceManager.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
 </Project>

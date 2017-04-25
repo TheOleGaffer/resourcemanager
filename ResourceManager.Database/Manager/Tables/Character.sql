@@ -6,11 +6,21 @@
 	[CharacterId] INT Identity(1,1) PRIMARY KEY, 
 >>>>>>> a39effcc455f7df00f366d57b1351fbd64ffad9b
     [UserId] INT NOT NULL, 
-    [SessionId] INT NOT NULL, 
+    [CampaignId] INT NOT NULL, 
     [CharacterName] NVARCHAR(50) NOT NULL DEFAULT 'Character', 
     [CharacterBackground] NVARCHAR(MAX) NULL, 
     [CharacterClass] NVARCHAR(50) NULL, 
-    [CharacterRace] NVARCHAR(50) NULL, 
+    [CharacterRace] NVARCHAR(50) NULL,
+	[Age] INT NOT NULL,
+	[Sex] NVARCHAR(50) NOT NULL,
+	[Height] INT NOT NULL,
+	[Weight] INT NOT NULL,
+	[Alignment] NVARCHAR(50) NOT NULL,
+	[Skill1] INT NOT NULL,
+	[Skill2] INT NOT NULL,
+	[Skill3] INT NOT NULL,
+	[SavingThrow1] INT NOT NULL,
+	[SavingThrow2] INT NOT NULL,
     [Strength] INT NOT NULL DEFAULT 0, 
     [Dexterity] INT NOT NULL DEFAULT 0, 
     [Constitution] INT NOT NULL DEFAULT 0, 
@@ -21,5 +31,5 @@
     [Experience] INT NOT NULL DEFAULT 0, 
     [CreatedOnDate] DATETIME NOT NULL DEFAULT (getutcdate()), 
     CONSTRAINT [FK_Character_Account] FOREIGN KEY ([UserId]) REFERENCES [Account]([UserId]), 
-    CONSTRAINT [FK_Character_Session] FOREIGN KEY ([SessionId]) REFERENCES [Session]([SessionId])
+    CONSTRAINT [FK_Character_Campaign] FOREIGN KEY ([CampaignId]) REFERENCES [Campaign].[Campaign]([CampaignId])
 )

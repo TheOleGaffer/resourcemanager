@@ -8,11 +8,11 @@
     <Property Name="NewName" Value="UserID" />
   </Operation>
   <Operation Name="Rename Refactor" Key="c05e1d69-c711-4a5d-a0b1-f4b57e03aef3" ChangeDateTime="04/04/2017 03:40:37">
-    <Property Name="ElementName" Value="[dbo].[Session].[Id]" />
+    <Property Name="ElementName" Value="[dbo].[Campaign].[Id]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
-    <Property Name="ParentElementName" Value="[dbo].[Session]" />
+    <Property Name="ParentElementName" Value="[dbo].[Campaign]" />
     <Property Name="ParentElementType" Value="SqlTable" />
-    <Property Name="NewName" Value="SessionId" />
+    <Property Name="NewName" Value="CampaignId" />
   </Operation>
   <Operation Name="Rename Refactor" Key="1b3c3004-8256-4674-aeec-949cda05046f" ChangeDateTime="04/04/2017 03:50:41">
     <Property Name="ElementName" Value="[dbo].[Character].[Id]" />
@@ -44,5 +44,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Username" />
   </Operation>
->>>>>>> a39effcc455f7df00f366d57b1351fbd64ffad9b
+  <Operation Name="Rename Refactor" Key="86769271-571f-45d4-bca5-3fc97a88880f" ChangeDateTime="04/20/2017 02:05:34">
+    <Property Name="ElementName" Value="[dbo].[Campaign].[CampaignId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Campaign]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CampaignId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9119b388-68c8-495d-b891-71bd906b1e2e" ChangeDateTime="04/20/2017 02:05:41">
+    <Property Name="ElementName" Value="[dbo].[Campaign].[CampaignName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Campaign]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CampaignName" />
+  </Operation>
 </Operations>

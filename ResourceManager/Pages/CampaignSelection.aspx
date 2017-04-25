@@ -1,19 +1,24 @@
-﻿<%@ Page Title="My Games" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SessionSelection.aspx.cs" Inherits="ResourceManager.Pages.SessionSelection" %>
+﻿<%@ Page Title="My Games" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CampaignSelection.aspx.cs" Inherits="ResourceManager.Pages.CampaignSelection" %>
 <%@ Import Namespace="System.Web.Script.Serialization" %>
 
 
 
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="MainContent">
-        <script type = "text/javascript" src="/Scripts/GameSessions.js"></script>
-    <link rel="stylesheet" type="text/css"  href="/Content/GameSession.css" />
+        <script type = "text/javascript" src="/Scripts/GameCampaigns.js"></script>
+    <link rel="stylesheet" type="text/css"  href="/Content/GameCampaign.css" />
     
 
     <h1>My Campaigns</h1>
 
-    <div id="sessionList">
-            <button id="createsessionbtn" data-toggle="modal" data-target="#myModal"></button>
+    <div id="CampaignList">
+            <button id="createCampaignbtn" data-toggle="modal" data-target="#myModal"></button>
     </div>
-    <asp:HiddenField ID="startingGoldValue" runat="server" value="" ClientIDMode="Static"/>
+    <asp:HiddenField ID="startingGoldValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="DropDownLanguageValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="DropDownHeightValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="DropDownWeightValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="DropDownGoldValue" runat="server" value="none" ClientIDMode="Static"/>
+    <asp:HiddenField ID="DropDownCoinValue" runat="server" value="none" ClientIDMode="Static"/>
 
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -37,7 +42,7 @@
                                 <input type="hidden" class="btn-select-input" id="" name="" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                <ul>
+                                <ul id="dropdownLanguage">
                                     <li>Based off Race/Default</li>
                                     <li>Can be custom</li>
                                 </ul>
@@ -51,7 +56,7 @@
                                 <input type="hidden" class="btn-select-input" id="" name="" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                <ul>
+                                <ul id="dropdownWeight">
                                     <li>Based off Race/Default</li>
                                     <li>Based off Race with Random Modifier</li>
                                     <li>Can be custom</li>
@@ -66,7 +71,7 @@
                                 <input type="hidden" class="btn-select-input" id="" name="" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                <ul>
+                                <ul id="dropdownHeight">
                                     <li>Based off Race/Default</li>
                                     <li>Based off Race with Random Modifier</li>
                                     <li>Can be custom</li>
@@ -81,7 +86,7 @@
                                 <input type="hidden" class="btn-select-input" id="" name="" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                <ul>
+                                <ul id="dropdownCoin">
                                     <li>Yes</li>
                                     <li>No</li>
                                 </ul>
@@ -95,7 +100,7 @@
                                 <input type="hidden" class="btn-select-input" id="" name="" value=""/>
                                 <span class="btn-select-value">Select an Item</span>
                                 <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                <ul>
+                                <ul id="dropdownGold">
                                     <li>No Starting Gold</li>
                                     <li>Based off Classes</li>
                                     <li>Custom Amount</li>
@@ -110,7 +115,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Create New Campaign</button>
+                    <button type="button" class="btn btn-primary" onserverclick="createButton_Click" runat="server">Create New Campaign</button>
                 </div>
             </div>
         </div>

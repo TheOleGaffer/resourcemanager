@@ -140,8 +140,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\dndimage.jpg" />
-    <Content Include="Content\GameSession.css" />
+    <Content Include="Content\GameCampaign.css" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -149,14 +148,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Pages\CampaignSession.aspx" />
     <Content Include="Pages\CharacterCreation\NewCharacterPage.aspx" />
     <Content Include="Pages\Game.aspx" />
     <Content Include="Pages\Login.aspx" />
-    <Content Include="Pages\SessionSelection.aspx" />
+    <Content Include="Pages\CampaignSelection.aspx" />
     <Content Include="Pages\SignUp.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\GameSessions.js" />
+    <Content Include="Scripts\GameCampaigns.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -219,9 +219,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\CharacterSession.cs" />
+    <Compile Include="Models\Campaign.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\CharacterCampaign.cs" />
     <Compile Include="Controllers\PasswordHelper.cs" />
-    <Compile Include="Controllers\SessionManager.cs" />
+    <Compile Include="Controllers\CampaignManager.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Controllers\UserManager.cs" />
     <Compile Include="Default.aspx.cs">
@@ -233,6 +235,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CampaignSession.aspx.cs">
+      <DependentUpon>CampaignSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CampaignSession.aspx.designer.cs">
+      <DependentUpon>CampaignSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CharacterCreation\NewCharacterPage.aspx.cs">
       <DependentUpon>NewCharacterPage.aspx</DependentUpon>
@@ -255,12 +264,12 @@
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SessionSelection.aspx.cs">
-      <DependentUpon>SessionSelection.aspx</DependentUpon>
+    <Compile Include="Pages\CampaignSelection.aspx.cs">
+      <DependentUpon>CampaignSelection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SessionSelection.aspx.designer.cs">
-      <DependentUpon>SessionSelection.aspx</DependentUpon>
+    <Compile Include="Pages\CampaignSelection.aspx.designer.cs">
+      <DependentUpon>CampaignSelection.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
