@@ -42,7 +42,7 @@ namespace ResourceManager.Controllers
             return enteredHash == existingUser.PasswordHash;
         }
         public const string connectionString =
-            "Data Source=localhost\\TESTSERVER;" +
+            "Data Source=localhost\\SQLEXPRESS;" +
             "Initial Catalog=ResourceManager;" +
             "Integrated Security=SSPI;";
 

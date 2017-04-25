@@ -140,7 +140,6 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CampaignSession.css" />
     <Content Include="Content\GameCampaign.css" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\Site.css" />
@@ -157,7 +156,6 @@
     <Content Include="Pages\SignUp.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\CampaignSession.js" />
     <Content Include="Scripts\GameCampaigns.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -221,7 +219,8 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\CampaignSessionManager.cs" />
+    <Compile Include="Controllers\Character.cs" />
+    <Compile Include="Controllers\CharacterManager.cs" />
     <Compile Include="Models\Campaign.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterCampaign.cs" />

@@ -7,11 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ResourceManager.Pages.CharacterCreation
-{
+namespace ResourceManager.Pages.CharacterCreation {
     
     
     public partial class NewCharacterPage {
+        
+        /// <summary>
+        /// MessageBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MessageBox;
         
         /// <summary>
         /// ConfirmButton control.
@@ -59,13 +67,22 @@ namespace ResourceManager.Pages.CharacterCreation
         protected global::System.Web.UI.WebControls.TextBox AgeBox;
         
         /// <summary>
-        /// RaceDropDown control.
+        /// HeightBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RaceDropDown;
+        protected global::System.Web.UI.WebControls.TextBox HeightBox;
+        
+        /// <summary>
+        /// WeightBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WeightBox;
         
         /// <summary>
         /// StrBase control.
@@ -122,13 +139,13 @@ namespace ResourceManager.Pages.CharacterCreation
         protected global::System.Web.UI.WebControls.TextBox StrTotal;
         
         /// <summary>
-        /// ClassDropDown control.
+        /// RaceDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ClassDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList RaceDropDown;
         
         /// <summary>
         /// DexBase control.
@@ -185,13 +202,13 @@ namespace ResourceManager.Pages.CharacterCreation
         protected global::System.Web.UI.WebControls.TextBox DexTotal;
         
         /// <summary>
-        /// AlignmentDropDown control.
+        /// ClassDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AlignmentDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList ClassDropDown;
         
         /// <summary>
         /// ConBase control.
@@ -246,6 +263,15 @@ namespace ResourceManager.Pages.CharacterCreation
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConTotal;
+        
+        /// <summary>
+        /// AlignmentDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList AlignmentDropDown;
         
         /// <summary>
         /// IntBase control.
@@ -408,6 +434,15 @@ namespace ResourceManager.Pages.CharacterCreation
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ChaTotal;
+        
+        /// <summary>
+        /// BackgroundBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BackgroundBox;
         
         /// <summary>
         /// Label1 control.
