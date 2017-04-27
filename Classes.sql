@@ -1,0 +1,18 @@
+﻿CREATE TABLE [dbo].[Table1]
+(
+	[ClassId] INT NOT NULL PRIMARY KEY,
+	[ClassName] NVARCHAR(50) NOT NULL DEFAULT 'Class', 
+	[HP] INT NOT NULL,
+	[Armor] NVARCHAR(50) NOT NULL,
+	[Weapon] NVARCHAR(50) NOT NULL,
+	[Skill1] INT NOT NULL,
+	[Skill2] INT NOT NULL,
+	[Skill3] INT NOT NULL DEFAULT 20,
+	[SavingThrow1] NVARCHAR(50) NOT NULL,
+	[SavingThrow2] NVARCHAR(50) NOT NULL,
+	[WeaponStart] NVARCHAR(50) NOT NULL,
+	[PackStart] NVARCHAR(50) NOT NULL,
+	[ToolStart] NVARCHAR(50) NOT NULL,
+	[GP] INT NOT NULL,
+	
+)
