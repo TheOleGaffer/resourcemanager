@@ -141,6 +141,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CampaignSession.css" />
+    <Content Include="Content\charactertop.JPG" />
     <Content Include="Content\GameCampaign.css" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\Site.css" />

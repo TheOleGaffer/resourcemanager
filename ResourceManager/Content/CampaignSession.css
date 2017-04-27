@@ -1,151 +1,532 @@
-﻿body,html{
-	height: 100%;
+﻿body {
+    background-color: #eee
 }
 
-/* remove outer padding */
-.main .row{
-	padding: 0px;
-	margin: 0px;
+#maincontent {
+    background: #ffffff;
+    z-index:- 50;
+    box-shadow: 10px 10px 10px 5px #888888;
 }
 
-/*Remove rounded coners*/
-
-nav.sidebar.navbar {
-	border-radius: 0px;
+hr {
+    position: absolute;
+    left: 3em;
+    bottom: 0;
+    height: 2em;
+    width: 90em;
 }
 
-nav.sidebar, .main{
-	-webkit-transition: margin 200ms ease-out;
-	-moz-transition: margin 200ms ease-out;
-	-o-transition: margin 200ms ease-out;
-	transition: margin 200ms ease-out;
+footer {
+    position: absolute;
+    left: 3em;
+    bottom: 0;
+    height: 2em;
+    width: 50em;
 }
 
-/* Add gap to nav and right windows.*/
-.main{
-	padding: 10px 10px 0 10px;
+.glyphicon.glyphicon-user, .glyphicon.glyphicon-home {
+    font-size: 3em;
 }
 
-/* .....NavBar: Icon only with coloring/layout.....*/
+/*Center content for character sheet*/
 
-/*small/medium side display*/
-@media (min-width: 768px) {
+#maincontent {
+    left: 5em;
+}
 
-	/*Allow main to be next to Nav*/
-	.main{
+.toprow {
+    height: 5em;
+}
+
+.charactername {
+    margin-left: 1em;
+    float: left;
+    margin-bottom: 0;
+}
+#characternameValue {
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: 1.5em;    
+}
+
+#charactername {
+    width: 15em;
+    border-top: 1px solid lightgray;
+    font-size: 1em;
+}
+
+.mainstats {
+    width:100%;
+    margin-top: 0.5em;
+    border: 1px solid #000000;
+    margin-bottom: 0;
+}
+.mainstats p{
+    margin-bottom: 0;
+    padding-left: 0em;
+}
+
+.statdefinition {
+    border-top: 1px solid lightgray;
+    font-size: 0.75em;
+    width: 19em;
+}
+.statvalues {
+    margin-bottom: 0;
+}
+
+#playernameValue {
+    margin-top: 0.5em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#leveldefinition {
+    float: left;
+}
+
+#characterlevelValue {
+    float: right;
+}
+
+.abilitycol {
+    margin: 1em;
+}
+.rectangleAbility {
+    width: 7em;
+    height: 7em;
+    border: 1px solid #000000;
+    margin: 1em;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    z-index: -1;
+}
+
+.abilityNumber {
+    font-size: 3em;
+}
+
+.ovalModifier {
+    background-color: #ffffff;
+    margin-top: -1.5em;
+    margin-left: 2.5em;
+    width: 3em;
+    height: 1.25em;
+    border: 1px solid #000000;
+    text-align: center;
+    border-radius: 40%;
+}
+
+.ovalModifier p {
+    font-size: 1em;
+    font-weight: bold;
+    vertical-align: center;
+    margin: 0 auto;
+}
+
+.bonuses {
+    width: 15em;
+    height: 3em;
+    border: 1px solid #000000;
+    margin: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    z-index: -1;
+}
+
+.bonuses p {
+    float: right;
+    padding-right: 1em;
+    padding-top: 0.75em;
+}
+
+.circleBonus {
+    background-color: #ffffff;
+    margin-top: -3.75em;
+    width: 3em;
+    height: 3em;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+
+.circleBonus p {
+    text-align: center;
+    padding-top: 0.5em;
+    font-weight: bold;
+}
+
+.checkboxcontainer {
+    margin-top: 1em;
+    border: 1px solid #000000;
+    width: 15em;
+    border-radius: 5px;
+}
+
+.checkboxcontainer .checkbox {
+    padding-left: 2em;
+}
+
+.checkboxcontainer p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangleContainer {
+    width: 8em;
+    border: 1px solid #000000;
+    margin: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.rectangleNumber{
+    font-size: 2em;
+}
+.rectangleContainer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.mediumrectangleContainer {
+    width: 100%;
+    height: 9em;
+    border: 1px solid #000000;
+    margin: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.greytotal {
+    margin-top: 0.5em;
+    color: gray;
+    margin-bottom: 2.75em;
+}
+.maxleft {
+    float: left;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.maxright {
+    float: left
+}
+
+.mediumrectangleContainer p {
+    text-align: center;
+}
+
+#currentHitPointsValue {
+    font-size: 3em;
+    margin-bottom: 0.15em;
+}
+
+.shortmediumrectangleContainer {
+    width: 100%;
+    height: 6.75em;
+    border: 1px solid #000000;
+    margin: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#temporaryHitPointsValue {
+    font-size: 3em;
+    margin-bottom: 0.15em;
+}
+
+.smallrectangleContainer {
+    width: 100%;
+    height: 6.75em;
+    border: 1px solid #000000;
+    margin: 1em;
+    border-radius: 5px;
+
+}
+
+.rectangleTitle p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 1.75em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.checkboxes {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+.largerectangleContainer {
+    width: 100%;
+    border: 1px solid #000000;
+    margin: 1em;
+    margin-top: 0.75em;
+    border-radius: 5px;
+    height: 26em;
+}
+
+.weaponrow {
+    margin-bottom: 0.25em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    width: 100%;
+}
+
+.titlebar {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: 12px;
+}
+
+.greybox {
+    background-color: lightgrey;
+    font-size: 12px;
+    margin-right: 0.25em;
+}
+
+.itemgreybox {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em; 
+}
+
+
+/*Pasted in bootstrap snippets go below*/
+    .animate {
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.navbar-fixed-left {
+		position: fixed;
+		top: 5em;
+		left: 0px;
+		border-radius: 0px;
+	}
+
+	.navbar-minimal {
+		width: 60px;		
+		min-height: 60px;
+		max-height: 100%;
+		background-color: rgb(51, 51, 51);
+		background-color: rgba(51, 51, 51, 0.8);
+		border-width: 0px;
+		z-index: 1000;
+	}
+
+	.navbar-minimal > .navbar-toggler {
+		position: relative;
+		min-height: 60px;
+		border-bottom: 1px solid rgb(81, 81, 81);
+		z-index: 100;
+		cursor: pointer;
+	}
+
+	.navbar-minimal.open > .navbar-toggler,
+	.navbar-minimal > .navbar-toggler:hover {
+		background-color: #428bca;
+	}
+
+	.navbar-minimal > .navbar-toggler > span {
 		position: absolute;
-		width: calc(100% - 40px); /*keeps 100% minus nav size*/
-		margin-left: 40px;
+		top: 50%;
+		right: 50%;
+		margin: -8px -8px 0 0;
+		width: 16px;
+		height: 16px;
+		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjMycHgiIHZpZXdCb3g9IjAgMCAxNiAzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTYgMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEsN2gxNGMwLjU1MiwwLDEsMC40NDgsMSwxcy0wLjQ0OCwxLTEsMUgxQzAuNDQ4LDksMCw4LjU1MiwwLDgKCVMwLjQ0OCw3LDEsN3oiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLDEyaDE0YzAuNTUyLDAsMSwwLjQ0OCwxLDFzLTAuNDQ4LDEtMSwxSDFjLTAuNTUyLDAtMS0wLjQ0OC0xLTEKCVMwLjQ0OCwxMiwxLDEyeiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEsMmgxNGMwLjU1MiwwLDEsMC40NDgsMSwxcy0wLjQ0OCwxLTEsMUgxQzAuNDQ4LDQsMCwzLjU1MiwwLDMKCVMwLjQ0OCwyLDEsMnoiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjMzLDI4Ljk3bDExLjY0LTExLjY0YzAuNDU5LTAuNDU5LDEuMjA0LTAuNDU5LDEuNjYzLDAKCWMwLjQ1OSwwLjQ1OSwwLjQ1OSwxLjIwNCwwLDEuNjYzTDIuOTkzLDMwLjYzM2MtMC40NTksMC40NTktMS4yMDQsMC40NTktMS42NjMsMEMwLjg3MSwzMC4xNzQsMC44NzEsMjkuNDMsMS4zMywyOC45N3oiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yLjk5MywxNy4zM2wxMS42NDEsMTEuNjRjMC40NTksMC40NTksMC40NTksMS4yMDQsMCwxLjY2MwoJcy0xLjIwNCwwLjQ1OS0xLjY2MywwTDEuMzMsMTguOTkzYy0wLjQ1OS0wLjQ1OS0wLjQ1OS0xLjIwNCwwLTEuNjYzQzEuNzg5LDE2Ljg3MSwyLjUzNCwxNi44NzEsMi45OTMsMTcuMzN6Ii8+Cjwvc3ZnPgo=);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		-webkit-transition: -webkit-transform .3s ease-out 0s;
+		-moz-transition: -moz-transform .3s ease-out 0s;
+		-o-transition: -moz-transform .3s ease-out 0s;
+		-ms-transition: -ms-transform .3s ease-out 0s;
+		transition: transform .3s ease-out 0s;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	.navbar-minimal > .navbar-menu {
+		position: absolute;
+		top: -1000px;
+		left: 0px;
+		margin: 0px;
+		padding: 5px;
+		list-style: none;
+		z-index: 50;
+		background-color: rgba(51, 51, 51, 0.8);
+	}
+	.navbar-minimal > .navbar-menu > li {
+		margin: 0px;
+		padding: 0px;
+		border-width: 0px;
+		height: 6em;
+	    width: 6em;
+	}
+	.navbar-minimal > .navbar-menu > li > a {
+		position: relative;
+		display: inline-block;
+		color: rgb(255, 255, 255);
+		padding: 20px 23px;
+		text-align: left;
+		cursor: pointer;
+		border-bottom: 1px solid rgb(81, 81, 81);
+		width: 100%;
+		text-decoration: none;
+		margin: 0px;
+	}
+
+	.navbar-minimal > .navbar-menu > li > a:last-child {
+		border-bottom-width: 0px;
+	}
+	.navbar-minimal > .navbar-menu > li > a:hover {
+		background-color: #428bca;
+	}
+/*	.navbar-minimal > .navbar-menu > li > a > .glyphicon {
 		float: right;
 	}
-
-	/*lets nav bar to be showed on mouseover*/
-	nav.sidebar:hover + .main{
-		margin-left: 200px;
+    */
+	.navbar-minimal.open {
+		width: 320px;
 	}
 
-	/*Center Brand*/
-	nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-		margin-left: 0px;
-	}
-	/*Center Brand*/
-	nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
-		text-align: center;
-		width: 100%;
-		margin-left: 0px;
+	.navbar-minimal.open > .navbar-toggler > span {
+		background-position: 0 -16px;
+		-webkit-transform: rotate(-180deg);
+		-moz-transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		transform: rotate(-180deg);
 	}
 
-	/*Center Icons*/
-	nav.sidebar a{
-		padding-right: 13px;
+	.navbar-minimal.open > .navbar-menu {
+		top: 60px;
+		/*width: 100%;*/
+		height: 19em;
 	}
 
-	/*adds border top to first nav box */
-	nav.sidebar .navbar-nav > li:first-child{
-		border-top: 1px #e5e5e5 solid;
+	@media (min-width: 768px) {
+		.navbar-minimal.open {
+			width: 7em;
+		}
+		.navbar-minimal.open > .navbar-menu {
+			overflow: visible;
+		}
+		.navbar-minimal > .navbar-menu > li > a > .desc {
+			position: absolute;
+			display: inline-block;
+			top: 50%;
+			left: 130px;
+			margin-top: -20px;
+			margin-left: 4em;
+			text-align: left;
+			white-space: nowrap;
+			padding: 0.5em 2em;
+			border-width: 0px !important;
+			background-color: rgb(51, 51, 51);
+			background-color: rgba(51, 51, 51, 0.8);
+			opacity: 0;
+		}
+		.navbar-minimal > .navbar-menu > li > a > .desc:after {
+			z-index: -1;
+			position: absolute;
+			top: 50%;
+			left: -10px;
+			margin-top: -10px;
+			content:'';
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent; 	
+			border-right: 10px solid rgb(51, 51, 51);
+			border-right-color: rgba(51, 51, 51, 0.8);
+		}
+		.navbar-minimal > .navbar-menu > li > a:hover > .desc {
+			left: 60px;
+			opacity: 1;
+		}
 	}
 
-	/*adds border to bottom nav boxes*/
-	nav.sidebar .navbar-nav > li{
-		border-bottom: 1px #e5e5e5 solid;
-	}
 
-	/* Colors/style dropdown box*/
-	nav.sidebar .navbar-nav .open .dropdown-menu {
-		position: static;
-		float: none;
-		width: auto;
-		margin-top: 0;
-		background-color: transparent;
-		border: 0;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
+    /*Begin section for chat window*/
 
-	/*allows nav box to use 100% width*/
-	nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
-		padding: 0 0px 0 0px;
-	}
-
-	/*colors dropdown box text */
-	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-		color: #777;
-	}
-
-	/*gives sidebar width/height*/
-	nav.sidebar{
-		width: 200px;
-		height: 100%;
-		margin-left: -160px;
-		float: left;
-		z-index: 8000;
-		margin-bottom: 0px;
-	}
-
-	/*give sidebar 100% width;*/
-	nav.sidebar li {
-		width: 100%;
-	}
-
-	/* Move nav to full on mouse over*/
-	nav.sidebar:hover{
-		margin-left: 0px;
-	}
-	/*for hiden things when navbar hidden*/
-	.forAnimate{
-		opacity: 0;
-	}
+#chatcontainer {
+    position: absolute;
+    bottom: 1em;
+    width: 90em;
+    z-index: 45;
+    left: 25em;
+}
+    .chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* .....NavBar: Fully showing nav bar..... */
-
-@media (min-width: 1330px) {
-
-	/*Allow main to be next to Nav*/
-	.main{
-		width: calc(100% - 200px); /*keeps 100% minus nav size*/
-		margin-left: 200px;
-	}
-
-	/*Show all nav*/
-	nav.sidebar{
-		margin-left: 0px;
-		float: left;
-	}
-	/*Show hidden items on nav*/
-	nav.sidebar .forAnimate{
-		opacity: 1;
-	}
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
 }
 
-nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
-	color: #CCC;
-	background-color: transparent;
+.chat li.left .chat-body
+{
+    margin-left: 60px;
 }
 
-nav:hover .forAnimate{
-	opacity: 1;
+.chat li.right .chat-body
+{
+    margin-right: 60px;
 }
-section{
-	padding-left: 15px;
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }

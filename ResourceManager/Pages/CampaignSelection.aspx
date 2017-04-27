@@ -21,8 +21,7 @@
     <asp:HiddenField ID="DropDownGoldValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="DropDownCoinValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="CampaignID" runat="server" value="none" ClientIDMode="Static"/>
-    <asp:Button ID="CampaignBtn" runat="server" Text="asdfasdf"  OnClick="joinGame_Click" ClientIDMode="Static" CausesValidation="False"/>
-
+    <button onserverclick="joinGame_Click" runat="server" id="CampaignButton" ClientIDMode="Static" style="display:none;"></button>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
