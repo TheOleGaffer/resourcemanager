@@ -1,11 +1,12 @@
 ﻿CREATE TABLE [dbo].[Races]
 (
-	[RaceId] INT NOT NULL PRIMARY KEY,
+	[RaceId] INT IDENTITY(1,1) PRIMARY KEY,
 	[Race] NVARCHAR(50) NOT NULL DEFAULT 'Race',
 	[Subrace1] NVARCHAR(50) NULL,
 	[Subrace2] NVARCHAR(50) NULL,
 	[Subrace3] NVARCHAR(50) NULL,
 	[Subrace4] NVARCHAR(50) NULL,
+	[Languages] NVARCHAR(50) NOT NULL,
 	[StrengthBonus] INT NOT NULL DEFAULT 0,
 	[DexterityBonus] INT NOT NULL DEFAULT 0,
 	[ConstitutionBonus] INT NOT NULL DEFAULT 0,

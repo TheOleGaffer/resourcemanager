@@ -1,8 +1,10 @@
 ﻿CREATE TABLE [dbo].[Classes]
 (
-	[ClassId] INT NOT NULL PRIMARY KEY,
+	[ClassId] INT IDENTITY(1,1) PRIMARY KEY,
 	[ClassName] NVARCHAR(50) NOT NULL DEFAULT 'Class', 
 	[HP] INT NOT NULL,
+	[HitDice] NVARCHAR(50) NOT NULL,
+	[Proficiency] INT NOT NULL,
 	[Armor] NVARCHAR(50) NOT NULL,
 	[Weapon] NVARCHAR(50) NOT NULL,
 	[SavingThrow1] NVARCHAR(50) NOT NULL,
