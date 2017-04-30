@@ -13,12 +13,12 @@ namespace ResourceManager.Pages {
     public partial class CampaignSession {
         
         /// <summary>
-        /// CampaignID control.
+        /// IsWeapon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CampaignID;
+        protected global::System.Web.UI.WebControls.HiddenField IsWeapon;
     }
 }
