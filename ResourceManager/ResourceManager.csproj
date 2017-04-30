@@ -145,6 +145,16 @@
     <Content Include="Content\GameCampaign.css" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\spelllevel1.JPG" />
+    <Content Include="Content\spelllevel2.JPG" />
+    <Content Include="Content\spelllevel3.JPG" />
+    <Content Include="Content\spelllevel4.JPG" />
+    <Content Include="Content\spelllevel5.JPG" />
+    <Content Include="Content\spelllevel6.JPG" />
+    <Content Include="Content\spelllevel7.JPG" />
+    <Content Include="Content\spelllevel8.JPG" />
+    <Content Include="Content\spelllevel9.JPG" />
+    <Content Include="Content\spelltriangle.JPG" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
