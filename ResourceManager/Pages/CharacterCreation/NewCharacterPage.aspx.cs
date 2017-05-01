@@ -795,6 +795,9 @@ namespace ResourceManager.Pages.CharacterCreation
                                         DateTime today = DateTime.Now;
                                         Character thisCharacter = new Character(10, 10, 10, name, background, Class, Race, Age, Sex, height,weight, Alignment, skill1Value, skill2Value, skill3Value, save1, save2, str, dex, con, Int, Wis, Cha, 0, 1, today);
                                         CharacterManager.NewCharacter(thisCharacter);
+                                        Response.Redirect("../Game.aspx");
+              
+                                        
 
                                     }
                                     else
