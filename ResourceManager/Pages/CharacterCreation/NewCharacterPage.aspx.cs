@@ -773,6 +773,13 @@ namespace ResourceManager.Pages.CharacterCreation
                                         int skill1Value = 20;
                                         int skill2Value = 20;
                                         int skill3Value = 20;
+                                        int Speed = 30;
+
+                                        if(Race == 1 || Race == 4 || Race == 7)
+                                        {
+                                            Speed = 25;
+                                        }
+
                                         for (int i = 0; i <= 17; i++)
                                         {
                                             String temp = Convert.ToString(i);
@@ -793,9 +800,9 @@ namespace ResourceManager.Pages.CharacterCreation
                                             }
                                         }
                                         DateTime today = DateTime.Now;
-                                        Character thisCharacter = new Character(10, 10, 10, name, background, Class, Race, Age, Sex, height,weight, Alignment, skill1Value, skill2Value, skill3Value, save1, save2, str, dex, con, Int, Wis, Cha, 0, 1, today);
+                                        Character thisCharacter = new Character(10, 10, 10, name, background, Class, Race, Age, Sex, height, weight, Speed, Alignment, skill1Value, skill2Value, skill3Value, save1, save2, str, dex, con, Int, Wis, Cha, 0, 1, today);
                                         CharacterManager.NewCharacter(thisCharacter);
-                                        Response.Redirect("../Game.aspx");
+                                        Response.Redirect("~/Pages/CampaignSession.aspx");
               
                                         
 

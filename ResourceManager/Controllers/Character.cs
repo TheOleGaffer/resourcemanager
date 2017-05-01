@@ -7,7 +7,7 @@ namespace ResourceManager
 {
     public class Character
     {
-        public Character(int characterID, int userId, int campaignID, string name, string background, int chClass, int race, int age, string sex, int height, int weight, string alignment, int skill1, int skill2, int skill3, string savingThrow1,
+        public Character(int characterID, int userId, int campaignID, string name, string background, int chClass, int race, int age, string sex, int height, int weight, int speed, string alignment, int skill1, int skill2, int skill3, string savingThrow1,
             string savingThrow2, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int experience, int level, DateTime createDateTime)
         {
             CharacterID = characterID;
@@ -21,6 +21,7 @@ namespace ResourceManager
             Sex = sex;
             Height = height;
             Weight = weight;
+            Speed = speed;
             Alignment = alignment;
             Skill1 = skill1;
             Skill2 = skill2;
@@ -36,6 +37,11 @@ namespace ResourceManager
             Experience = experience;
             Level = level;
             CreatedOnDateTime = createDateTime;
+            Inspiration = 0;
+            ProficiencyBonus = 0;
+            ArmorClass = 10 + (int)Math.Floor((Convert.ToDouble(dexterity) - 10) / 2);
+            PassivePerception = 10 + (int)Math.Floor((Convert.ToDouble(wisdom) - 10) / 2);
+            MaxHitPoints = 0;
         }
 
         public int CampaignID { get; set; }
@@ -49,6 +55,10 @@ namespace ResourceManager
         public string Sex{ get; set;}
         public int Height { get; set; }
         public int Weight { get; set; }
+        public int Speed { get; set; }
+        public int Inspiration { get; set; }
+        public int ProficiencyBonus { get; set; }
+        public int PassivePerception { get; set; }
         public string Alignment { get; set;}
         public int Skill1 { get; set;}
         public int Skill2 { get; set;}
@@ -62,7 +72,9 @@ namespace ResourceManager
         public int Wisdom { get; set;}
         public int Charisma { get; set;}
         public int Experience { get; set; }
+        public int ArmorClass { get; set; }
         public int Level { get; set; }
+        public int MaxHitPoints { get; set; }
         public DateTime CreatedOnDateTime { get; set; }
     }
 }

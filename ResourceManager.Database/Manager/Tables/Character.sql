@@ -11,6 +11,7 @@
 	[Sex] NVARCHAR(50) NOT NULL,
 	[Height] INT NOT NULL,
 	[Weight] INT NOT NULL,
+	[Speed] INT NOT NULL,
 	[Alignment] NVARCHAR(50) NOT NULL,
 	[Skill1] INT NOT NULL,
 	[Skill2] INT NOT NULL,

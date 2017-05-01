@@ -24,6 +24,7 @@ namespace ResourceManager.Controllers
                 command.Parameters.AddWithValue("@Sex", newCharacter.Sex);
                 command.Parameters.AddWithValue("@Height", newCharacter.Height);
                 command.Parameters.AddWithValue("@Weight", newCharacter.Weight);
+                command.Parameters.AddWithValue("@Speed", newCharacter.Speed);
                 command.Parameters.AddWithValue("@Alignment", newCharacter.Alignment);
                 command.Parameters.AddWithValue("@Skill1", newCharacter.Skill1);
                 command.Parameters.AddWithValue("@Skill2", newCharacter.Skill2);
