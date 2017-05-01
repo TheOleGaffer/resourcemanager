@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿CREATE TABLE [dbo].[Races]
 (
 	[RaceId] INT NOT NULL PRIMARY KEY,
@@ -36,4 +37,24 @@
 	INSERT INTO Races(RaceId, Race, Subrace1, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(20, 'Genasi', 'N/A', 0, 0, 2, 0, 0, 0)
 	INSERT INTO Races(RaceId, Race, Subrace1, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(21, 'Goliath', 'N/A', 2, 0, 1, 0, 0, 0)
 
+=======
+﻿CREATE TABLE [dbo].[Races]
+(
+	[RaceId] INT IDENTITY(1,1) PRIMARY KEY,
+	[Race] NVARCHAR(50) NOT NULL DEFAULT 'Race',
+	[Subrace1] NVARCHAR(50) NULL,
+	[Subrace2] NVARCHAR(50) NULL,
+	[Subrace3] NVARCHAR(50) NULL,
+	[Subrace4] NVARCHAR(50) NULL,
+	[Languages] NVARCHAR(50) NOT NULL,
+	[StrengthBonus] INT NOT NULL DEFAULT 0,
+	[DexterityBonus] INT NOT NULL DEFAULT 0,
+	[ConstitutionBonus] INT NOT NULL DEFAULT 0,
+	[IntelligenceBonus] INT NOT NULL DEFAULT 0,
+	[WisdomBonus] INT NOT NULL DEFAULT 0,
+	[CharismaBonus] INT NOT NULL DEFAULT 0,
+
+
+
+>>>>>>> fce03b20fc64ce2bef964325d43d4006520bee27
 )

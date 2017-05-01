@@ -47,10 +47,10 @@ namespace ResourceManager.Controllers
                     while (rdr.Read())
                     {
                         //todo convert race and class back to ints
-                        list.Add(new Character((int) rdr[0], (int) rdr[1], (int) rdr[2], rdr[3].ToString(), rdr[4].ToString(), rdr[5].ToString(),
+                       /* list.Add(new Character((int) rdr[0], (int) rdr[1], (int) rdr[2], rdr[3].ToString(), rdr[4].ToString(), rdr[5].ToString(),
                             rdr[6].ToString(), (int)rdr[7], rdr[8].ToString(), (int)rdr[9], (int)rdr[10], rdr[11].ToString(), (int)rdr[12], 
                             (int)rdr[13], (int)rdr[14], rdr[15].ToString(), rdr[16].ToString(), (int) rdr[17], (int)rdr[18], (int)rdr[19],
-                            (int)rdr[20], (int)rdr[21], (int)rdr[22], (int)rdr[23], (int)rdr[24], Convert.ToDateTime(rdr[25].ToString())));
+                            (int)rdr[20], (int)rdr[21], (int)rdr[22], (int)rdr[23], (int)rdr[24], Convert.ToDateTime(rdr[25].ToString())));*/
                     }
 
                 }

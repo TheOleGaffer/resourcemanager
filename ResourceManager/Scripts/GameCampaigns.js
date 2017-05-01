@@ -13,7 +13,7 @@ function joinGameBtn_Click(campaignid) {
     var temp = document.getElementById('CampaignID');
     temp.value = campaignid;
 
-    var button = document.getElementById("CampaignBtn");
+    var button = document.getElementById("CampaignButton");
     button.click();
 }
 
@@ -37,16 +37,16 @@ function makeUl(array) {
         //Create elements that matter when someone hovers over a campaign button
         var hoverstate = document.createElement('div');
         var hoverbutton = document.createElement('button');
-        hoverbutton.id = 'hoverbutton';
+        hoverbutton.className = 'hoverbutton';
         var func = createFunction(campId);
         hoverbutton.onclick = func;
-        hoverstate.id = 'hoverstate';
+        hoverstate.className = 'hoverstate';
         hoverstate.appendChild(hoverbutton);
 
         var div = document.createElement('div');
         var divimage = document.createElement('div');
-        divimage.id = 'thumbnail';
-        div.id = 'Campaignname';
+        divimage.className = 'thumbnail';
+        div.className = 'Campaignname';
         div.appendChild(document.createTextNode(campaignName));
 
 
@@ -56,20 +56,20 @@ function makeUl(array) {
         //if they are the dm of the Campaign we don't want any of the elements
         if (array[i].IsDM === false) {
             div = document.createElement('div');
-            div.id = 'charactername';
+            div.className = 'charactername';
             div.appendChild(document.createTextNode(charName));
             item.appendChild(div);
             div = document.createElement('div');
-            div.id = 'characterclass';
+            div.className = 'characterclass';
             div.appendChild(document.createTextNode(charClass));
             item.appendChild(div);
             div = document.createElement('div');
-            div.id = 'characterrace';
+            div.className = 'characterrace';
             div.appendChild(document.createTextNode(charRace));
             item.appendChild(div);
         } else {
             div = document.createElement('div');
-            div.id = 'dm';
+            div.className = 'dm';
             div.appendChild(document.createTextNode('DM'));
             item.appendChild(div);
         }
@@ -181,14 +181,14 @@ $(document).on('click', '.btn-select', function (e) {
         $(this).addClass("active");
     }
 });
-$(document).ready(function() {
-    $(document).on('click', '#hoverbutton', function () {
-        $("#CampaignBtn").click();
-        var button = document.getElementById("CampaignBtn");
-        button.click();
-        alert("remove"); 
-    });
-});
+//$(document).ready(function() {
+//    $(document).on('click', '.hoverbutton', function () {
+//        $("#MainContent_CampaignButton").click();
+//        var button = document.getElementById("MainContent_CampaignButton");
+//        button.click();
+//        alert("remove"); 
+//    });
+//});
 
 $(document).on('click', function (e) {
     var target = $(e.target).closest(".btn-select");

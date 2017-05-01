@@ -11,7 +11,7 @@ namespace ResourceManager.Controllers
     public class CampaignManager
     {
         public const string ConnectionString =
-            "Data Source=localhost\\TESTSERVER;" +
+            "Data Source=localhost\\SQLEXPRESS;" +
             "Initial Catalog=ResourceManager;" +
             "Integrated Security=SSPI;";
 
