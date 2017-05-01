@@ -68,17 +68,17 @@ GO
 IF NOT EXISTS (SELECT 1 FROM [Races])
 	BEGIN
 		SET IDENTITY_INSERT [Races] ON
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(1,  'Dragonborn', 'N/A', 2, 0, 0, 0, 0, 1)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(2,  'Dwarf', 'N/A', 'Dwarvish', 0, 0, 2, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(5,  'Elf', 'N/A', 'Elvish',0, 2, 0, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(9,  'Gnome', 'N/A', 'Gnomish',0, 0, 0, 2, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(13, 'Half-Elf', 'N/A', 'N/A',0, 0, 0, 0, 0, 2)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(14, 'Half-Orc', 'N/A', 'Orc',2, 0, 1, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(15, 'Halfling', 'N/A', 'Halfling',0, 2, 0, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(18, 'Human', 'N/A', 'Common',0, 0, 0, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(19, 'Tiefling', 'N/A', 'Infernal',0, 0, 0, 1, 0, 2)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(20, 'Genasi', 'N/A', 'N/A',0, 0, 2, 0, 0, 0)
-		INSERT [Races] (RaceId, Race, Languages, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus) VALUES(21, 'Goliath', 'N/A', 'N/A',2, 0, 1, 0, 0, 0)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(1,  'Dragonborn', 'Common/Draconic', 'Medium', 2, 0, 0, 0, 0, 1, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(2,  'Dwarf', 'Common/Dwarvish', 'Medium',0, 0, 2, 0, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(5,  'Elf', 'Elvish','Medium',0, 2, 0, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(9,  'Gnome','Gnomish','Small',0, 0, 0, 2, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(13, 'Half-Elf', 'Common/Elvish','Medium',0, 0, 0, 0, 0, 2, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(14, 'Half-Orc', 'Orc','Medium',2, 0, 1, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(15, 'Halfling', 'Halfling','Small',0, 2, 0, 0, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(18, 'Human', 'Common','Medium',0, 0, 0, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(19, 'Tiefling', 'Infernal','Medium',0, 0, 0, 1, 0, 2, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(20, 'Genasi',  'N/A','Medium',0, 0, 2, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(21, 'Goliath', 'N/A','Large',2, 0, 1, 0, 0, 0, 30)
 		SET IDENTITY_INSERT [Races] OFF
 	END
 GO
