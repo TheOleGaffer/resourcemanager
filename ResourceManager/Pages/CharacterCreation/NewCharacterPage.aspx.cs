@@ -738,8 +738,8 @@ namespace ResourceManager.Pages.CharacterCreation
                                         String name = NameBox.Text;
                                         int Age = Convert.ToInt32(AgeBox.Text);
                                         String Sex = SexDropDown.SelectedItem.Text;
-                                        String Race = RaceDropDown.SelectedItem.Text;
-                                        String Class = ClassDropDown.SelectedItem.Text;
+                                        int Race = Convert.ToInt32(RaceDropDown.SelectedItem.Value);
+                                        int Class = Convert.ToInt32(ClassDropDown.SelectedItem.Value);
                                         String Alignment = AlignmentDropDown.SelectedItem.Text;
                                         String background = BackgroundBox.Text;
                                         int height = Convert.ToInt32(HeightBox.Text);
@@ -770,6 +770,9 @@ namespace ResourceManager.Pages.CharacterCreation
                                         String skill1 = "";
                                         String skill2 = "";
                                         String skill3 = "";
+                                        int skill1Value = 20;
+                                        int skill2Value = 20;
+                                        int skill3Value = 20;
                                         for (int i = 0; i <= 17; i++)
                                         {
                                             String temp = Convert.ToString(i);
@@ -777,20 +780,20 @@ namespace ResourceManager.Pages.CharacterCreation
                                             {
                                                 if (skill1 == "")
                                                 {
-                                                    skill1 = SkillsBox.Items.FindByValue(temp).Text;
+                                                    skill1Value = Convert.ToInt32(SkillsBox.Items.FindByValue(temp).Value);
                                                 }
                                                 else if (skill1 != "" && skill2 == "")
                                                 {
-                                                    skill2 = SkillsBox.Items.FindByValue(temp).Text;
+                                                    skill2Value = Convert.ToInt32(SkillsBox.Items.FindByValue(temp).Text);
                                                 }
                                                 else
                                                 {
-                                                    skill3 = SkillsBox.Items.FindByValue(temp).Text;
+                                                    skill3Value = Convert.ToInt32(SkillsBox.Items.FindByValue(temp).Text);
                                                 }
                                             }
                                         }
                                         DateTime today = DateTime.Now;
-                                        Character thisCharacter = new Character(name, background, Class, Race, Age, Sex, Alignment, skill1, skill2, skill3, save1, save2, str, dex, con, Int, Wis, Cha, 0, 1, today);
+                                        Character thisCharacter = new Character(10, 10, 10, name, background, Class, Race, Age, Sex, height,weight, Alignment, skill1Value, skill2Value, skill3Value, save1, save2, str, dex, con, Int, Wis, Cha, 0, 1, today);
                                         CharacterManager.NewCharacter(thisCharacter);
 
                                     }

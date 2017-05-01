@@ -34,16 +34,16 @@
             <asp:TextBox ID="StrTotal" runat="server" BackColor="#EEEEEE" BorderStyle="None" ReadOnly="True" TextMode="Number" Width="40px">10</asp:TextBox>
         </p>
         <p>Race:<asp:DropDownList ID="RaceDropDown" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RaceDropDown_SelectedIndexChanged">
-            <asp:ListItem>Dragonborn</asp:ListItem>
-            <asp:ListItem>Dwarf</asp:ListItem>
-            <asp:ListItem>Elf</asp:ListItem>
-            <asp:ListItem>Eladrin</asp:ListItem>
-            <asp:ListItem>Gnome</asp:ListItem>
-            <asp:ListItem>Half-Elf</asp:ListItem>
-            <asp:ListItem>Half-Orc</asp:ListItem>
-            <asp:ListItem>Halfling</asp:ListItem>
-            <asp:ListItem>Human</asp:ListItem>
-            <asp:ListItem>Tiefling</asp:ListItem>
+            <asp:ListItem Value="0">Dragonborn</asp:ListItem>
+            <asp:ListItem Value="1">Dwarf</asp:ListItem>
+            <asp:ListItem Value="2">Elf</asp:ListItem>
+            <asp:ListItem Value="3">Eladrin</asp:ListItem>
+            <asp:ListItem Value="4">Gnome</asp:ListItem>
+            <asp:ListItem Value="5">Half-Elf</asp:ListItem>
+            <asp:ListItem Value="6">Half-Orc</asp:ListItem>
+            <asp:ListItem Value="7">Halfling</asp:ListItem>
+            <asp:ListItem Value="8">Human</asp:ListItem>
+            <asp:ListItem Value="9">Tiefling</asp:ListItem>
             </asp:DropDownList>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Dexterity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="DexBase" runat="server" BackColor="#EEEEEE" BorderStyle="None" ForeColor="Black" ReadOnly="True" TextMode="Number" Width="40px">8</asp:TextBox>
@@ -58,19 +58,19 @@
             <asp:TextBox ID="DexTotal" runat="server" BackColor="#EEEEEE" BorderStyle="None" ReadOnly="True" TextMode="Number" Width="40px">8</asp:TextBox>
         </p>
         <p>Class:<asp:DropDownList ID="ClassDropDown" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ClassDropDown_SelectedIndexChanged">
-            <asp:ListItem>Artificer</asp:ListItem>
-            <asp:ListItem>Barbarian</asp:ListItem>
-            <asp:ListItem>Bard</asp:ListItem>
-            <asp:ListItem>Cleric</asp:ListItem>
-            <asp:ListItem>Druid</asp:ListItem>
-            <asp:ListItem>Fighter</asp:ListItem>
-            <asp:ListItem>Monk</asp:ListItem>
-            <asp:ListItem>Paladin</asp:ListItem>
-            <asp:ListItem>Ranger</asp:ListItem>
-            <asp:ListItem>Rogue</asp:ListItem>
-            <asp:ListItem>Sorcerer</asp:ListItem>
-            <asp:ListItem>Warlock</asp:ListItem>
-            <asp:ListItem>Wizard</asp:ListItem>
+            <asp:ListItem Value="0">Artificer</asp:ListItem>
+            <asp:ListItem Value="1">Barbarian</asp:ListItem>
+            <asp:ListItem Value="2">Bard</asp:ListItem>
+            <asp:ListItem Value="3">Cleric</asp:ListItem>
+            <asp:ListItem Value="4">Druid</asp:ListItem>
+            <asp:ListItem Value="5">Fighter</asp:ListItem>
+            <asp:ListItem Value="6">Monk</asp:ListItem>
+            <asp:ListItem Value="7">Paladin</asp:ListItem>
+            <asp:ListItem Value="8">Ranger</asp:ListItem>
+            <asp:ListItem Value="9">Rogue</asp:ListItem>
+            <asp:ListItem Value="10">Sorcerer</asp:ListItem>
+            <asp:ListItem Value="11">Warlock</asp:ListItem>
+            <asp:ListItem Value="12">Wizard</asp:ListItem>
             </asp:DropDownList>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constitution:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="ConBase" runat="server" BackColor="#EEEEEE" BorderStyle="None" ForeColor="Black" ReadOnly="True" TextMode="Number" Width="40px">8</asp:TextBox>
@@ -84,7 +84,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="ConTotal" runat="server" BackColor="White" BorderStyle="None" ReadOnly="True" TextMode="Number" Width="40px" style="background-color: #EEEEEE">8</asp:TextBox>
         </p>
-        <p>AlignMent:<asp:DropDownList ID="AlignmentDropDown" runat="server">
+        <p>Alignment:<asp:DropDownList ID="AlignmentDropDown" runat="server">
             <asp:ListItem>Lawful Good</asp:ListItem>
             <asp:ListItem>Lawful Neutral</asp:ListItem>
             <asp:ListItem>Lawful Evil</asp:ListItem>
