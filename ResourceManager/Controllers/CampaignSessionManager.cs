@@ -11,7 +11,7 @@ namespace ResourceManager.Controllers
     public class CampaignSessionManager
     {
         public const string ConnectionString =
-        "Data Source=localhost\\TESTSERVER;" +
+        "Data Source=localhost\\SQLEXPRESS;" +
         "Initial Catalog=ResourceManager;" +
         "Integrated Security=SSPI;";
 
@@ -48,9 +48,9 @@ namespace ResourceManager.Controllers
                     {
                         //todo convert race and class back to ints
                        list.Add(new Character((int) rdr[0], (int) rdr[1], (int) rdr[2], rdr[3].ToString(), rdr[4].ToString(), (int)rdr[5],
-                            (int)rdr[6], (int)rdr[7], rdr[8].ToString(), (int)rdr[9], (int)rdr[10], rdr[11].ToString(), (int)rdr[12], 
-                            (int)rdr[13], (int)rdr[14], rdr[15].ToString(), rdr[16].ToString(), (int) rdr[17], (int)rdr[18], (int)rdr[19],
-                            (int)rdr[20], (int)rdr[21], (int)rdr[22], (int)rdr[23], (int)rdr[24], Convert.ToDateTime(rdr[25].ToString())));
+                            (int)rdr[6], (int)rdr[7], rdr[8].ToString(), (int)rdr[9], (int)rdr[10], (int)rdr[11], rdr[12].ToString(), (int)rdr[13], 
+                            (int)rdr[14], (int)rdr[15], rdr[16].ToString(), rdr[17].ToString(), (int) rdr[18], (int)rdr[19], (int)rdr[20],
+                            (int)rdr[21], (int)rdr[22], (int)rdr[23], (int)rdr[24], (int)rdr[25], Convert.ToDateTime(rdr[26].ToString())));
                     }
 
                 }
