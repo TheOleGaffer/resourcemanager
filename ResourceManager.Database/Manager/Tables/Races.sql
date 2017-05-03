@@ -10,7 +10,8 @@
 	[IntelligenceBonus] INT NOT NULL DEFAULT 0,
 	[WisdomBonus] INT NOT NULL DEFAULT 0,
 	[CharismaBonus] INT NOT NULL DEFAULT 0,
-	[Speed] INT NOT NULL DEFAULT 0
+	[Speed] INT NOT NULL DEFAULT 0,
+	[Features] nvarchar(max)
 
 
 

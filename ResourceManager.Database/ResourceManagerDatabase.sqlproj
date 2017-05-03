@@ -84,6 +84,7 @@
     <Build Include="Manager\Stored Procedures\GetCampaign.sql" />
     <Build Include="Manager\Tables\Classes.sql" />
     <Build Include="Manager\Tables\Races.sql" />
+    <Build Include="Manager\Tables\Items.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ResourceManager.Database.refactorlog" />
