@@ -65,3 +65,38 @@ IF NOT EXISTS (SELECT 1 FROM [Skills])
 		SET IDENTITY_INSERT [Skills] OFF
 	END
 GO
+IF NOT EXISTS (SELECT 1 FROM [Races])
+	BEGIN
+		SET IDENTITY_INSERT [Races] ON
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(1,  'Dragonborn', 'Common/Draconic', 'Medium', 2, 0, 0, 0, 0, 1, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(2,  'Dwarf', 'Common/Dwarvish', 'Medium',0, 0, 2, 0, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(5,  'Elf', 'Elvish','Medium',0, 2, 0, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(9,  'Gnome','Gnomish','Small',0, 0, 0, 2, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(13, 'Half-Elf', 'Common/Elvish','Medium',0, 0, 0, 0, 0, 2, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(14, 'Half-Orc', 'Orc','Medium',2, 0, 1, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(15, 'Halfling', 'Halfling','Small',0, 2, 0, 0, 0, 0, 25)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(18, 'Human', 'Common','Medium',0, 0, 0, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(19, 'Tiefling', 'Infernal','Medium',0, 0, 0, 1, 0, 2, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(20, 'Genasi',  'N/A','Medium',0, 0, 2, 0, 0, 0, 30)
+		INSERT [Races] (RaceId, Race, Languages, Size, StrengthBonus, DexterityBonus, ConstitutionBonus, IntelligenceBonus, WisdomBonus, CharismaBonus, Speed) VALUES(21, 'Goliath', 'N/A','Large',2, 0, 1, 0, 0, 0, 30)
+		SET IDENTITY_INSERT [Races] OFF
+	END
+GO
+IF NOT EXISTS (SELECT 1 FROM [Classes])
+	BEGIN
+		SET IDENTITY_INSERT [Classes] ON
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(1, 'Barbarian', 12, 'd12', 2,'Light/Medium/Shields', 'Simple/Martial', 'Strength', 'Constitution', '', 'N/A', 'N/A', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(2, 'Bard', 8, 'd8','Light', 'Simple', 'N/A', 'N/A', 'Simple', 'Diplomat/Entertainer', 'Lute', 50)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(3, 'Cleric', 8, 'd8', 'Light/Medium/Shields', 'Simple', 'Wisdom', 'Charisma', 'N/A', 'Priest/Explorer', 'Holy Symbol', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(4, 'Druid', 8, 'd8', 'Light/Medium/Shields', 'Simple', 'Intelligence', 'Wisdom', 'Simple', 'N/A', 'Herbalism Kit', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(5, 'Fighter', 10, 'd10', 'All', 'All', 'Strength', 'Dexterity', 'N/A', 'N/A', 'Artisan Tool', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(6, 'Monk', 8, 'd8', 'N/A', 'Simple', 'Dexeterity', 'Wisdom', 'Simple', 'Dungeoneer/Explorer', '10 Darts', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(7, 'Paladin', 10, 'd10', 'All', 'All', 'Wisdom', 'Charisma', 'N/A', 'N/A', 'N/A', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(8, 'Ranger', 10, 'd10', 'Light/Medium/Shields', 'Simple/Martial', 'Strength', 'Dexterity', 'N/A', 'N/A', 'Tool', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(9, 'Rogue', 8, 'd8', 'Light', 'Simple', 'Dexterity', 'Intelligence', 'N/A', 'N/A', 'Thieves Tool', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(10, 'Sorcerer', 6, 'd6', 'N/A', 'Simple', 'Constitution', 'Charisma', 'Simple', 'Dungeoneer/Explorer', 'N/A', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(11, 'Warlock', 8, 'd8', 'Light', 'Simple', 'Wisdom', 'Charisma', 'Simple', 'Scholar/Dungeoneer', 'N/A', 0)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Proficiency, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(12, 'Wizard', 6, 'd6', 'N/A', 'Simple', 'Intelligence', 'Wisdom', 'Simple', 'Scholar/Explorer', 'N/A', 0)
+		SET IDENTITY_INSERT [Classes] OFF
+	END
+GO
