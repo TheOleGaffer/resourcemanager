@@ -64,6 +64,7 @@ namespace ResourceManager.Models
         public int HeightOptionsId { get; set; }
         public int WeightOptionsId { get; set; }
         public int LanguageOptionsId { get; set; }
+        public List<CharacterSheet> CharacterSheets { get; set; }
     }
 
 }
