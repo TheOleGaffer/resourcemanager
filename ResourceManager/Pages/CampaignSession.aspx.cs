@@ -11,7 +11,7 @@ namespace ResourceManager.Pages
 {
     public partial class CampaignSession : System.Web.UI.Page
     {
-        public List<Character> CharacterList;
+        public List<CharacterSheet> CharacterSheets;
         public Campaign Campaign;
         public bool IsDM = false;
         protected void Page_Load(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace ResourceManager.Pages
             if (user.UserID == Campaign.DungeonMasterID)
                 IsDM = true;
             //CampaignID.Text = Campaign.CampaignID.ToString();
-            CharacterList = CampaignSessionManager.GetAllCampaignCharacters(Campaign.CampaignID);
+            CharacterSheets = CampaignSessionManager.GetCharacterSheets(Campaign.CampaignID);
         }
     }
 }

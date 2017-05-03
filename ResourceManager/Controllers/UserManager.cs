@@ -72,6 +72,26 @@ namespace ResourceManager.Controllers
             return user;
         }
 
+        public static User GetUser(int userid)
+        {
+            User user = null;
+            using (var conn = new SqlConnection(connectionString))
+            using (var command = new SqlCommand("GetUserById", conn) { CommandType = CommandType.StoredProcedure })
+            {
+                conn.Open();
+                command.Parameters.AddWithValue("@UserId", userid);
+                using (SqlDataReader rdr = command.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        user = new User((int)rdr[0], rdr[1].ToString(), rdr[2].ToString(), (int)rdr[3], rdr[5].ToString(), Convert.ToDateTime(rdr[4].ToString()));
+                    }
+                }
+
+            }
+            return user;
+        }
+
         public static bool UserExists(string username)
         {
             return GetUser(username) != null;

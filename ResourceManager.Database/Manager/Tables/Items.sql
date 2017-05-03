@@ -9,6 +9,7 @@
 	[ItemDescription] nvarchar(max) ,
 	[IsWeapon] nvarchar(50) default 'False' NOT NULL,
 	[ItemDamage] nvarchar default 'None' NOT NULL,
+	[IsEquiped] nvarchar(50) default 'False' NOT NULL,
 	[CreatedOnDate] DATETIME NOT NULL DEFAULT (getutcdate()), 
 	CONSTRAINT [FK_Character_Id] FOREIGN KEY ([CharacterId]) REFERENCES [Character](CharacterId)
 )
