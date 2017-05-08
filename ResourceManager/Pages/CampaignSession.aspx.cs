@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Newtonsoft.Json;
 using ResourceManager.Controllers;
 using ResourceManager.Models;
 
@@ -26,6 +27,9 @@ namespace ResourceManager.Pages
                 IsDM = true;
             //CampaignID.Text = Campaign.CampaignID.ToString();
             CharacterSheets = CampaignSessionManager.GetCharacterSheets(Campaign.CampaignID);
+            var json = JsonConvert.SerializeObject(CharacterSheets);
+            ClientScript.RegisterArrayDeclaration("dataList", json);
+            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "id", "start()", true);
         }
     }
 }

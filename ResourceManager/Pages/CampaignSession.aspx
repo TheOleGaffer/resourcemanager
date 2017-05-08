@@ -127,30 +127,30 @@
             
         </div>
     <%--    This nav section is for the popup character navbar--%>
-        <nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+        <nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation" id="characternav">
             <div class="navbar-toggler animate">
                 <span class="menu-icon"></span>
             </div>
-            <ul class="navbar-menu animate">
-                <li>
-                    <a href="#about-us" class="animate">
-                        <span class="desc animate"> Your Character </span>
-                        <span class="glyphicon glyphicon-home"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#blog" class="animate">
-                        <span class="desc animate"> What We Say </span>
-                        <span class="glyphicon glyphicon-user"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact-us" class="animate">
-                        <span class="desc animate"> How To Reach Us </span>
-                        <span class="glyphicon glyphicon-user"></span>
-                    </a>
-                </li>
-            </ul>
+<%--            <ul class="navbar-menu animate">--%>
+<%--                <li>--%>
+<%--                    <a href="#about-us" class="animate">--%>
+<%--                        <span class="desc animate"> Your Character </span>--%>
+<%--                        <span class="glyphicon glyphicon-home"></span>--%>
+<%--                    </a>--%>
+<%--                </li>--%>
+<%--                <li>--%>
+<%--                    <a href="#blog" class="animate">--%>
+<%--                        <span class="desc animate"> What We Say </span>--%>
+<%--                        <span class="glyphicon glyphicon-user"></span>--%>
+<%--                    </a>--%>
+<%--                </li>--%>
+<%--                <li>--%>
+<%--                    <a href="#contact-us" class="animate">--%>
+<%--                        <span class="desc animate"> How To Reach Us </span>--%>
+<%--                        <span class="glyphicon glyphicon-user"></span>--%>
+<%--                    </a>--%>
+<%--                </li>--%>
+<%--            </ul>--%>
         </nav>
         
 <%--        This is the carousel for all the pages--%>
@@ -217,7 +217,7 @@
                             </div>
                             <div class="row">
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                    <div id="experience" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
                                         70%
                                     </div>
                                 </div>
@@ -304,35 +304,41 @@
                                 <div class="checkboxcontainer">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="strengthSavingValue"> 0 Strength
+                                            <input type="checkbox" id="strengthSavingValue">
+                                            <p id="strengthSavingValueNum"> 0 Strength </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="dexteritySavingValue"> 0 Dexterity
+                                            <input type="checkbox" id="dexteritySavingValue">
+                                            <p id="dexteritySavingValueNum"> 0 Dexterity </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="constitutionSavingValue"> 0 Constitution
+                                            <input type="checkbox" id="constitutionSavingValue">
+                                            <p id="constitutionSavingValueNum"> 0 Constitution </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="intelligenceSavingValue"> 0 Intelligence
+                                            <input type="checkbox" id="intelligenceSavingValue">
+                                            <p id="intelligenceSavingValueNum"> 0 Intelligence </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="wisdomSavingValue"> 0 Wisdom
+                                            <input type="checkbox" id="wisdomSavingValue">
+                                            <p id="wisdomSavingValueNum"> 0 Wisdom </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="charismaSavingValue"> 0 Charisma
+                                            <input type="checkbox" id="charismaSavingValue">
+                                            <p id="charismaSavingValueNum"> 0 Charisma </p>
                                         </label>
                                     </div>
-                                    <p>Saving Throws</p>
+                                    <p class="title">Saving Throws</p>
                                 </div>
                             </div>
 
@@ -341,95 +347,113 @@
                                 <div class="checkboxcontainer">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="acrobaticsSkillsValue"> 0 Acrobatics
+                                            <input type="checkbox" id="acrobaticsSkillsValue">
+                                            <p id="acrobatics"> 0 Acrobatics </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="animalhandlingSkillsValue"> 0 Animal Handling
+                                            <input type="checkbox" id="animalhandlingSkillsValue">
+                                            <p id="animalHandling"> 0 Animal Handling </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="arcanaSkillsValue"> 0 Arcana
+                                            <input type="checkbox" id="arcanaSkillsValue">
+                                            <p id="arcana"> 0 Arcana </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="athleticsSkillsValue"> 0 Athletics
+                                            <input type="checkbox" id="athleticsSkillsValue">
+                                            <p id="athletics"> 0 Athletics </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="deceptionSkillsValue"> 0 Deception
+                                            <input type="checkbox" id="deceptionSkillsValue">
+                                            <p id="deception"> 0 Deception </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="historySkillsValue"> 0 History
+                                            <input type="checkbox" id="historySkillsValue">
+                                            <p id="history"> 0 History </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="insightSkillsValue"> 0 Insight
+                                            <input type="checkbox" id="insightSkillsValue">
+                                            <p id="insight"> 0 Insight </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="intimidationSkillsValue"> 0 Intimidation
+                                            <input type="checkbox" id="intimidationSkillsValue">
+                                            <p id="intimidation"> 0 Intimidation </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="investigationSkillsValue"> 0 Investigation
+                                            <input type="checkbox" id="investigationSkillsValue">
+                                            <p id="investigation"> 0 Investigation </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="medicineSkillsValue"> 0 Medicine
+                                            <input type="checkbox" id="medicineSkillsValue">
+                                            <p id="medicine"> 0 Medicine </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="natureSkillsValue"> 0 Nature
+                                            <input type="checkbox" id="natureSkillsValue">
+                                            <p id="nature"> 0 Nature </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="perceptionSkillsValue"> 0 Perception
+                                            <input type="checkbox" id="perceptionSkillsValue">
+                                            <p id="perception"> 0 Perception </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="performanceSkillsValue"> 0 Performance
+                                            <input type="checkbox" id="performanceSkillsValue">
+                                            <p id="performance"> 0 Performance </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="persuasionSkillsValue"> 0 Persuasion
+                                            <input type="checkbox" id="persuasionSkillsValue">
+                                            <p id="persuasion"> 0 Persuasion </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="religionSkillsValue"> 0 Religion
+                                            <input type="checkbox" id="religionSkillsValue">
+                                            <p id="religion"> 0 Religion </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="sleightofhandSkillsValue"> 0 Sleight of Hand
+                                            <input type="checkbox" id="sleightofhandSkillsValue">
+                                            <p id="sleightOfHand"> 0 Sleight of Hand </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="stealthSkillsValue"> 0 Stealth
+                                            <input type="checkbox" id="stealthSkillsValue">
+                                            <p id="stealth"> 0 Stealth </p>
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="survivalSkillsValue"> 0 Survival
+                                            <input type="checkbox" id="survivalSkillsValue">
+                                            <p id="survival"> 0 Survival </p>
                                         </label>
                                     </div>
-                                    <p>Skills</p>
+                                    <p class="title">Skills</p>
                                 </div>
                             </div>
                         </div>
@@ -484,13 +508,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
+                                    
                                     <div class="smallrectangleContainer">
-                                        <div class="greytotal">
-                                            <div class="maxleft">
+                                        <div class="row greytotal">
+                                            <div class="col-lg-offset-2 col-lg-3">
                                                 <p>Total:</p>
                                             </div>
-                                            <div class="maxright">
-                                                <p id="hitDieValue">1d10</p>
+                                            <div class="col-lg-offset-1 col-lg-4">
+                                                <p id="hitDieLevelValue">1</p>
+                                                <p id="hitDieValue">d10</p>
                                             </div>
                                         </div>
                                         <div class="rectangleTitle">

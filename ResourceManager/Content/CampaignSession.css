@@ -399,7 +399,7 @@ footer {
 
 .checkboxcontainer .checkbox { padding-left: 2em; }
 
-.checkboxcontainer p {
+.checkboxcontainer .title {
     font-weight: bold;
     text-align: center;
 }
@@ -434,6 +434,11 @@ footer {
     color: gray;
     margin-bottom: 2.75em;
     margin-top: 0.5em;
+}
+
+#hitDieLevelValue {
+    float: left;
+    margin-right: 0em;
 }
 
 .maxleft {
@@ -581,7 +586,10 @@ div.characterinfotext { width: 100%; }
     margin-right: -1em;
 }
 
-.weights { margin-right: -2em; }
+.weights { 
+    margin-right: -2em;
+    padding-right: 0;
+}
 
 .leftlabel {
     float: left;

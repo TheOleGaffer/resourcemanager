@@ -155,7 +155,7 @@ IF NOT EXISTS (SELECT 1 FROM [Classes])
 	BEGIN
 		SET IDENTITY_INSERT [Classes] ON
 		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(1, 'Barbarian', 12, 'd12','Light/Medium/Shields', 'Simple/Martial', 'Strength', 'Constitution', '', 'N/A', 'N/A', 0)
-		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(2, 'Bard', 8, 'd8','Light', 'Simple', 'N/A', 'N/A', 'Simple', 'Diplomat/Entertainer', 'Lute', 50)
+		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(2, 'Bard', 8, 'd8','Light', 'Simple', 'Dexterity', 'Charisma', 'Simple', 'Diplomat/Entertainer', 'Lute', 50)
 		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(3, 'Cleric', 8, 'd8', 'Light/Medium/Shields', 'Simple', 'Wisdom', 'Charisma', 'N/A', 'Priest/Explorer', 'Holy Symbol', 0)
 		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(4, 'Druid', 8, 'd8', 'Light/Medium/Shields', 'Simple', 'Intelligence', 'Wisdom', 'Simple', 'N/A', 'Herbalism Kit', 0)
 		INSERT [Classes] (ClassId, ClassName, HP, HitDice, Armor, Weapon, SavingThrow1, SavingThrow2, WeaponStart, PackStart, ToolStart, GP) VALUES(5, 'Fighter', 10, 'd10', 'All', 'All', 'Strength', 'Dexterity', 'N/A', 'N/A', 'Artisan Tool', 0)
