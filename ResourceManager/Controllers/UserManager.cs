@@ -97,6 +97,11 @@ namespace ResourceManager.Controllers
             return GetUser(username) != null;
         }
 
+        public static bool UserExists(int userid)
+        {
+            return GetUser(userid) != null;
+        }
+
     }
 
 }

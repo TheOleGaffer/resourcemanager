@@ -235,6 +235,7 @@
     <Compile Include="Controllers\CampaignSessionManager.cs" />
     <Compile Include="Controllers\Character.cs" />
     <Compile Include="Controllers\CharacterManager.cs" />
+    <Compile Include="Controllers\InvitationManager.cs" />
     <Compile Include="Models\Campaign.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterCampaign.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="Controllers\CampaignManager.cs" />
     <Compile Include="Models\CharacterSheet.cs" />
     <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\Invitation.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Race.cs" />
     <Compile Include="Models\User.cs" />

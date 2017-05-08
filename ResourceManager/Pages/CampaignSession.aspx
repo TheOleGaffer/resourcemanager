@@ -10,6 +10,8 @@
 <asp:HiddenField ID="IsCampaignDm" runat="server" value="false" ClientIDMode="Static"/>
 <asp:HiddenField ID="UserID" runat="server" value="0" ClientIDMode="Static"/>
     <asp:HiddenField ID="CampaignName" runat="server" value="name" ClientIDMode="Static"/>
+    <asp:HiddenField ID="InvitedUsername" runat="server" value="name" ClientIDMode="Static"/>
+    <button onserverclick="sendInvitation_Click" runat="server" id="InvitationButton" ClientIDMode="Static" style="display:none;"></button>
 <div id="wrapper">
     <!-- Modal -->
     <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemLabel">
@@ -1082,9 +1084,9 @@
                         <div class="row topmargin">
                             <div class="col-lg-4 col-lg-offset-1">
                                 <div class="input-group">
-                                  <input type="text" class="form-control" placeholder="Enter username">
+                                  <input type="text" class="form-control" id="invitationusername" placeholder="Enter username">
                                   <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button">Send Invitation</button>
+                                    <button class="btn btn-secondary" onclick="sendInvitation()" type="button">Send Invitation</button>
                                   </span>
                                 </div>
                             </div>

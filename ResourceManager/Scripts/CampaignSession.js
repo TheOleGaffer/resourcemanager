@@ -273,6 +273,13 @@ function createFunction(sheetnum) {
     return function () {loadCharacterSheet(dataList[0][sheetnum])}
 }
 
+function sendInvitation() {
+    var username = document.getElementById("invitationusername");
+    document.getElementById("InvitedUsername").value = username.value;
+    document.getElementById("InvitationButton").click();
+
+}
+
 function loadCampaignHome() {
     document.getElementById("campaignSessionValue").innerText = document.getElementById("CampaignName").value;
     $("#carousel").carousel(3);
@@ -326,7 +333,6 @@ function makeCharacterList(array) {
 function start() {
     document.getElementById("characternav").appendChild(makeCharacterList(dataList[0]));
     reloadStylesheets();
-    debugger;
     if (document.getElementById("IsCampaignDm").value == "true")
         loadCampaignHome();
     else {

@@ -89,6 +89,10 @@
     <Build Include="Manager\Stored Procedures\GetClass.sql" />
     <Build Include="Manager\Stored Procedures\GetItemsOfCharacter.sql" />
     <Build Include="Manager\Stored Procedures\GetUserById.sql" />
+    <Build Include="Manager\Tables\Invitation.sql" />
+    <Build Include="Manager\Stored Procedures\AddInvitation.sql" />
+    <Build Include="Manager\Stored Procedures\RemoveInvitation.sql" />
+    <Build Include="Manager\Stored Procedures\GetAllUserInvitations.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ResourceManager.Database.refactorlog" />

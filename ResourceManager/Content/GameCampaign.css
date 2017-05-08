@@ -9,6 +9,17 @@
     width: 14em;
     height: 13.5em;
 }
+#invitationList li {
+    list-style: none;
+    float: left;
+    border: 1px solid #dfe4e9;
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+    position: relative;
+    width: 14em;
+    height: 13.5em;
+}
 
 .gameCampaign:hover .hoverstate{
     display: inline;

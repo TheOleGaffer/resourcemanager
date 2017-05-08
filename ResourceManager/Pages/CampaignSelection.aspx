@@ -8,11 +8,16 @@
     <link rel="stylesheet" type="text/css"  href="/Content/GameCampaign.css" />
     
     
+    <div class="row">
+        <h1>My Campaigns</h1>
 
-    <h1>My Campaigns</h1>
-
-    <div id="CampaignList">
-            <button id="createCampaignbtn" data-toggle="modal" data-target="#myModal"></button>
+        <div id="CampaignList">
+                <button id="createCampaignbtn" data-toggle="modal" data-target="#myModal"></button>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Invitations</h3>
+        <div id="invitationList"></div>
     </div>
     <asp:HiddenField ID="startingGoldValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="DropDownLanguageValue" runat="server" value="none" ClientIDMode="Static"/>
@@ -22,6 +27,7 @@
     <asp:HiddenField ID="DropDownCoinValue" runat="server" value="none" ClientIDMode="Static"/>
     <asp:HiddenField ID="CampaignID" runat="server" value="none" ClientIDMode="Static"/>
     <button onserverclick="joinGame_Click" runat="server" id="CampaignButton" ClientIDMode="Static" style="display:none;"></button>
+    <button onserverclick="createCharacter_Click" runat="server" id="CreateCharacterButton" ClientIDMode="Static" style="display:none;"></button>
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

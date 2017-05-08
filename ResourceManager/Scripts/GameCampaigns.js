@@ -1,4 +1,5 @@
 ﻿var dataList = [];
+var invitationList = [];
 
 raisePostBack = function() {
     __doPostBack("<%=btnRaisePostBack.ClientID%>", "");
@@ -17,8 +18,52 @@ function joinGameBtn_Click(campaignid) {
     button.click();
 }
 
+function createCharacter(campaignid) {
+    document.getElementById('CampaignID').value = campaignid;
+    document.getElementById("CreateCharacterButton").click();
+}
+
 function createFunction(id) {
     return function() { joinGameBtn_Click(id); };
+}
+
+function createFunctionChar(id) {
+    return function () {createCharacter(id)}
+}
+
+function makeInvitationList(array) {
+    var list = document.createElement('ul');
+    for (var i = 0; i < array.length; i++) {
+        var item = document.createElement('li');
+        item.classList.add("gameCampaign");
+
+        var inviteId = array[i].InvitationId;
+        var invitedId = array[i].InvitedId;
+        var campaignId = array[i].CampaignId;
+        var inviteeId = array[i].InviteeId;
+
+        //Create elements that matter when someone hovers over a campaign button
+        var hoverstate = document.createElement('div');
+        var hoverbutton = document.createElement('button');
+        hoverbutton.className = 'hoverbutton';
+        var func = createFunctionChar(campaignId);
+        hoverbutton.onclick = func;
+        hoverstate.className = 'hoverstate';
+        hoverstate.appendChild(hoverbutton);
+
+        var div = document.createElement('div');
+        var divimage = document.createElement('div');
+        divimage.className = 'thumbnail';
+        div.className = 'Campaignname';
+        div.appendChild(document.createTextNode("Invitation"));
+
+
+        item.appendChild(divimage);
+        item.appendChild(hoverstate);
+        item.appendChild(div);
+        list.appendChild(item);
+    }
+    return list;
 }
 
 function makeUl(array) {
@@ -107,6 +152,7 @@ function makeUl(array) {
 function start() {
     //creates html elements for game Campaigns
     document.getElementById('CampaignList').appendChild(makeUl(dataList[0]));
+    document.getElementById("invitationList").appendChild(makeInvitationList(invitationList[0]));
     //have to reload since html is dynamically added and some elements aren't there to begin with
     reloadStylesheets();
 }

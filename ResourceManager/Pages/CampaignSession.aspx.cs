@@ -14,6 +14,7 @@ namespace ResourceManager.Pages
     {
         public List<CharacterSheet> CharacterSheets;
         public Campaign Campaign;
+        public User user;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["username"] == null)
@@ -22,7 +23,7 @@ namespace ResourceManager.Pages
                 Response.Redirect("CampaignSelection.aspx");
             Campaign = CampaignSessionManager.GetCampaign((int) Session["campaignid"]);
             CampaignName.Value = Campaign.CampaignName;
-            var user = UserManager.GetUser(Session["username"].ToString());
+            user = UserManager.GetUser(Session["username"].ToString());
             if (user.UserID == Campaign.DungeonMasterID)
                 IsCampaignDm.Value = "true";
             else
@@ -32,6 +33,13 @@ namespace ResourceManager.Pages
             var json = JsonConvert.SerializeObject(CharacterSheets);
             ClientScript.RegisterArrayDeclaration("dataList", json);
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "id", "start()", true);
+        }
+
+
+
+        public void sendInvitation_Click(object sender, EventArgs e)
+        {
+            var addStatus = InvitationManager.AddInvitation(InvitedUsername.Value, Campaign.CampaignID, UserManager.GetUser(Session["username"].ToString()).UserID);
         }
     }
 }

@@ -23,6 +23,12 @@ namespace ResourceManager.Pages
             CampaignList = CampaignManager.GetCharacterCampaigns(Session["username"].ToString());
             var json = JsonConvert.SerializeObject(CampaignList);
             ClientScript.RegisterArrayDeclaration("dataList", json);
+
+            var invitelist =
+                InvitationManager.GetAllInvitations(UserManager.GetUser(Session["username"].ToString()).UserID);
+            var json2 = JsonConvert.SerializeObject(invitelist);
+            ClientScript.RegisterArrayDeclaration("invitationList", json2);
+
             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "id", "start()", true);
 
         }
@@ -40,6 +46,12 @@ namespace ResourceManager.Pages
             Session["campaignid"] = int.Parse(CampaignID.Value);
             Response.Redirect("CampaignSession.aspx");
             //style="display:none;"
+        }
+
+        public void createCharacter_Click(object sender, EventArgs e)
+        {
+            Session["campaignid"] = CampaignID.Value;
+            Response.Redirect("CharacterCreation/NewCharacterPage.aspx");
         }
     }
 }
