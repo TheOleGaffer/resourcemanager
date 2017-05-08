@@ -29,6 +29,8 @@ footer {
 
 .glyphicon.glyphicon-user, .glyphicon.glyphicon-home { font-size: 3em; }
 
+.glyphicon.glyphicon-cog { font-size: 2.5em;}
+
 
 /*Center content for character sheet 2 (More character info)*/
 #characternameValue2 {

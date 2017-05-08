@@ -12,6 +12,7 @@
     <asp:HiddenField ID="CampaignName" runat="server" value="name" ClientIDMode="Static"/>
     <asp:HiddenField ID="InvitedUsername" runat="server" value="name" ClientIDMode="Static"/>
     <button onserverclick="sendInvitation_Click" runat="server" id="InvitationButton" ClientIDMode="Static" style="display:none;"></button>
+    <button onserverclick="redirectBack" runat="server" id="RedirectButton" ClientIDMode="Static" style="display:none;"></button>
 <div id="wrapper">
     <!-- Modal -->
     <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemLabel">

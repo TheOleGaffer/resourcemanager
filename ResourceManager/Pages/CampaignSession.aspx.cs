@@ -41,5 +41,10 @@ namespace ResourceManager.Pages
         {
             var addStatus = InvitationManager.AddInvitation(InvitedUsername.Value, Campaign.CampaignID, UserManager.GetUser(Session["username"].ToString()).UserID);
         }
+
+        public void redirectBack(object sender, EventArgs e)
+        {
+            Response.Redirect("CampaignSelection.aspx");
+        }
     }
 }

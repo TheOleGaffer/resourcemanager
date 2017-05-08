@@ -285,33 +285,35 @@ function loadCampaignHome() {
     $("#carousel").carousel(3);
 }
 
+function redirectBack() {
+    document.getElementById("RedirectButton").click();
+}
+
 function makeCharacterList(array) {
     var list = document.createElement('ul');
     list.classList.add("navbar-menu");
     list.classList.add("animate");
-    if (document.getElementById("IsCampaignDm").value == "true") {
-        var dm = document.createElement('li');
-        var dmbutton = document.createElement('a');
-        var dminsidespan1 = document.createElement('span');
-        var dminsidespan2 = document.createElement('span');
-        dmbutton.classList.add("animate");
-        dminsidespan1.classList.add("desc");
-        dminsidespan1.classList.add("animate");
-        dminsidespan2.classList.add("glyphicon");
-        dminsidespan2.classList.add("glyphicon-home");
-        dmbutton.onclick = loadCampaignHome;
-        dmbutton.href = "javascript:void(0);";
-        dminsidespan1.appendChild(document.createTextNode("Campaign Home"));
-        dmbutton.appendChild(dminsidespan1);
-        dmbutton.appendChild(dminsidespan2);
-        dm.appendChild(dmbutton);
-        list.appendChild(dm);
-    }
+    var item = document.createElement('li');
+    var button = document.createElement('a');
+    var insidespan1 = document.createElement('span');
+    var insidespan2 = document.createElement('span');
+    button.classList.add("animate");
+    insidespan1.classList.add("desc");
+    insidespan1.classList.add("animate");
+    insidespan2.classList.add("glyphicon");
+    insidespan2.classList.add("glyphicon-home");
+    button.onclick = redirectBack;
+    button.href = "javascript:void(0);";
+    insidespan1.appendChild(document.createTextNode("Campaign Selection"));
+    button.appendChild(insidespan1);
+    button.appendChild(insidespan2);
+    item.appendChild(button);
+    list.appendChild(item);
     for (var i = 0; i < array.length; i++) {
-        var item = document.createElement('li');
-        var button = document.createElement('a');
-        var insidespan1 = document.createElement('span');
-        var insidespan2 = document.createElement('span');
+        item = document.createElement('li');
+        button = document.createElement('a');
+        insidespan1 = document.createElement('span');
+        insidespan2 = document.createElement('span');
         button.classList.add("animate");
         insidespan1.classList.add("desc");
         insidespan1.classList.add("animate");
@@ -326,6 +328,24 @@ function makeCharacterList(array) {
         button.appendChild(insidespan2);
         item.appendChild(button);
         list.appendChild(item);
+    }
+    if (document.getElementById("IsCampaignDm").value == "true") {
+        var dm = document.createElement('li');
+        var dmbutton = document.createElement('a');
+        var dminsidespan1 = document.createElement('span');
+        var dminsidespan2 = document.createElement('span');
+        dmbutton.classList.add("animate");
+        dminsidespan1.classList.add("desc");
+        dminsidespan1.classList.add("animate");
+        dminsidespan2.classList.add("glyphicon");
+        dminsidespan2.classList.add("glyphicon-cog");
+        dmbutton.onclick = loadCampaignHome;
+        dmbutton.href = "javascript:void(0);";
+        dminsidespan1.appendChild(document.createTextNode("Campaign Settings"));
+        dmbutton.appendChild(dminsidespan1);
+        dmbutton.appendChild(dminsidespan2);
+        dm.appendChild(dmbutton);
+        list.appendChild(dm);
     }
     return list;
 }
