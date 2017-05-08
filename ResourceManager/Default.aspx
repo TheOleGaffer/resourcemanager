@@ -3,38 +3,35 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1>Resource Manager</h1>
+        <p class="lead">Resource Manager is a simple, free solution for all your Dungeons and Dragons 5th Edition campaign needs.</p>
+        <p><a href="/Pages/SignUp" class="btn btn-primary btn-lg">Sign Up &raquo;</a></p>
     </div>
 
     <div class="row">
         <div class="col-md-4">
             <h2>Getting started</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                Resource Manager allows Dungeon Masters to quickly setup their own custom campaigns and then invite their players. 
+                The players can then easily setup their characters and control their character info on the fly.
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2>Read up on the Rules</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                Basic player rules to help new players to quickly get on their feet.
             </p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                <a class="btn btn-default" href="http://dnd.wizards.com/products/tabletop/players-basic-rules">Read Here &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2>Dungeon Master Guide</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                Basic dungeon master guide for reference
             </p>
             <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                <a class="btn btn-default" href="http://dnd.wizards.com/products/tabletop/dm-basic-rules">Read Here &raquo;</a>
             </p>
         </div>
     </div>
