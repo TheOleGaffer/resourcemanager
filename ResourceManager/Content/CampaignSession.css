@@ -851,8 +851,6 @@ div.characterinfotext { width: 100%; }
 }
 
 .navbar-minimal.open > .navbar-menu {
-    /*width: 100%;*/
-    height: 19em;
     top: 60px;
 }
 
@@ -898,6 +896,17 @@ div.characterinfotext { width: 100%; }
     }
 }
 
+
+#campaignSessionValue {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 2em;
+    text-align: center;
+}
+.notes {
+    height: 58em;
+}
 
 /*Begin section for chat window*/
 

@@ -27,6 +27,7 @@ $(document)
     });
 
 function loadCharacterSheet(charactersheet) {
+    $("#carousel").carousel(0);
     var character = charactersheet.Character;
     var charclass = charactersheet.Class;
     var charRace = charactersheet.Race;
@@ -254,22 +255,6 @@ function setSkillCheckbox(skill) {
     }
 }
 
-
-
-function loadSkills(charactersheet) {
-    var character = charactersheet.Character;
-    setCheckBoxBasedOnSkill(charactersheet, character.Skill1);
-}
-
-function setCheckBoxBasedOnSkill(charactersheet, skill) {
-    switch (skill) {
-        case 1:
-
-        
-    default:
-    }
-}
-
 function getProficiency(level) {
     if (level < 5) 
         return 2;
@@ -288,10 +273,33 @@ function createFunction(sheetnum) {
     return function () {loadCharacterSheet(dataList[0][sheetnum])}
 }
 
+function loadCampaignHome() {
+    document.getElementById("campaignSessionValue").innerText = document.getElementById("CampaignName").value;
+    $("#carousel").carousel(3);
+}
+
 function makeCharacterList(array) {
     var list = document.createElement('ul');
     list.classList.add("navbar-menu");
     list.classList.add("animate");
+    if (document.getElementById("IsCampaignDm").value == "true") {
+        var dm = document.createElement('li');
+        var dmbutton = document.createElement('a');
+        var dminsidespan1 = document.createElement('span');
+        var dminsidespan2 = document.createElement('span');
+        dmbutton.classList.add("animate");
+        dminsidespan1.classList.add("desc");
+        dminsidespan1.classList.add("animate");
+        dminsidespan2.classList.add("glyphicon");
+        dminsidespan2.classList.add("glyphicon-home");
+        dmbutton.onclick = loadCampaignHome;
+        dmbutton.href = "javascript:void(0);";
+        dminsidespan1.appendChild(document.createTextNode("Campaign Home"));
+        dmbutton.appendChild(dminsidespan1);
+        dmbutton.appendChild(dminsidespan2);
+        dm.appendChild(dmbutton);
+        list.appendChild(dm);
+    }
     for (var i = 0; i < array.length; i++) {
         var item = document.createElement('li');
         var button = document.createElement('a');
@@ -318,6 +326,15 @@ function makeCharacterList(array) {
 function start() {
     document.getElementById("characternav").appendChild(makeCharacterList(dataList[0]));
     reloadStylesheets();
+    debugger;
+    if (document.getElementById("IsCampaignDm").value == "true")
+        loadCampaignHome();
+    else {
+        for (var i = 0; i < dataList[0].length; i++) {
+            if (dataList[0][i].Character.UserId == document.getElementById("UserID").value)
+                loadCharacterSheet(dataList[0][i]);
+        }
+    }
 }
 
 function reloadStylesheets() {

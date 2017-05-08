@@ -14,7 +14,6 @@ namespace ResourceManager.Pages
     {
         public List<CharacterSheet> CharacterSheets;
         public Campaign Campaign;
-        public bool IsDM = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["username"] == null)
@@ -22,9 +21,12 @@ namespace ResourceManager.Pages
             if (Session["campaignid"] == null)
                 Response.Redirect("CampaignSelection.aspx");
             Campaign = CampaignSessionManager.GetCampaign((int) Session["campaignid"]);
+            CampaignName.Value = Campaign.CampaignName;
             var user = UserManager.GetUser(Session["username"].ToString());
             if (user.UserID == Campaign.DungeonMasterID)
-                IsDM = true;
+                IsCampaignDm.Value = "true";
+            else
+                UserID.Value = user.UserID.ToString();
             //CampaignID.Text = Campaign.CampaignID.ToString();
             CharacterSheets = CampaignSessionManager.GetCharacterSheets(Campaign.CampaignID);
             var json = JsonConvert.SerializeObject(CharacterSheets);

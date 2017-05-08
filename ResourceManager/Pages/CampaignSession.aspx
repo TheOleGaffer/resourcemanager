@@ -7,6 +7,9 @@
     
 
 <asp:HiddenField ID="IsWeapon" runat="server" value="none" ClientIDMode="Static"/>
+<asp:HiddenField ID="IsCampaignDm" runat="server" value="false" ClientIDMode="Static"/>
+<asp:HiddenField ID="UserID" runat="server" value="0" ClientIDMode="Static"/>
+    <asp:HiddenField ID="CampaignName" runat="server" value="name" ClientIDMode="Static"/>
 <div id="wrapper">
     <!-- Modal -->
     <div class="modal fade" id="addItemModal" tabindex="-1" role="dialog" aria-labelledby="addItemLabel">
@@ -1061,6 +1064,39 @@
                             </div>
                         </div>
                     </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="item">
+              <div class="container-fluid">
+                    <div class="page4" id="slide4">
+                        <div class="row toprow">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-7">
+                            <div id="campaignSessionValue">Campaign Name Here</div>
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                        <div class="row topmargin">
+                            <div class="col-lg-4 col-lg-offset-1">
+                                <div class="input-group">
+                                  <input type="text" class="form-control" placeholder="Enter username">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">Send Invitation</button>
+                                  </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 notes">
+                                <div class="form-horizontal horizontal">
+                                    <div class="form-group characterinfotext">
+                                        <textarea id="campaignNotesValue" class="form-control characterinfotextbox" rows="28" placeholder="Enter Text here..." required></textarea>
+                                        <label class="wideBoxInfoLabel" for="campaignNotesValue">Campaign Notes</label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
                     </div>                    
                 </div>
             </div>
